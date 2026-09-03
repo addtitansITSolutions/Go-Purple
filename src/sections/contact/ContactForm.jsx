@@ -79,14 +79,21 @@ const ContactForm = () => {
       return;
     }
 
-    const { name, email, phone, company, service, message } = values;
+    const {
+      name,
+      email,
+      phone,
+      company,
+      service,
+      message,
+    } = values;
 
     // Email subject
-    const subject = "New Enquiry from Smartek Digital Website";
+    const subject = `New ${service} Enquiry - GoPurple`;
 
     // Email body
     const body = `
-Hello Smartek Digital Team,
+Hello GoPurple Team,
 
 I would like to get in touch regarding your services.
 
@@ -98,7 +105,12 @@ Name: ${name}
 Email: ${email}
 Phone: ${phone}
 Company: ${company || "Not provided"}
-Service: ${service}
+
+--------------------------------
+SERVICE
+--------------------------------
+
+${service}
 
 --------------------------------
 PROJECT DETAILS
@@ -107,17 +119,17 @@ PROJECT DETAILS
 ${message}
 
 --------------------------------
-Sent from Smartek Digital website
+Sent from GoPurple website
 --------------------------------
 `;
 
     // Create mailto URL
     const mailtoUrl =
-      `mailto:info@smartekdigital.com` +
+      `mailto:info@gopurple.com` +
       `?subject=${encodeURIComponent(subject)}` +
       `&body=${encodeURIComponent(body)}`;
 
-    // Open user's default mail application
+    // Open user's default email application
     window.location.href = mailtoUrl;
   };
 
@@ -143,9 +155,12 @@ Sent from Smartek Digital website
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="border border-[var(--border)] bg-white p-6 sm:p-8 lg:p-10"
+        className="w-full"
       >
-        {/* Name */}
+
+        {/* =====================================================
+            NAME
+        ===================================================== */}
         <div>
           <label
             htmlFor="name"
@@ -172,8 +187,12 @@ Sent from Smartek Digital website
           )}
         </div>
 
-        {/* Email + Phone */}
+
+        {/* =====================================================
+            EMAIL + PHONE
+        ===================================================== */}
         <div className="mt-7 grid gap-7 sm:grid-cols-2">
+
           {/* Email */}
           <div>
             <label
@@ -201,6 +220,7 @@ Sent from Smartek Digital website
             )}
           </div>
 
+
           {/* Phone */}
           <div>
             <label
@@ -227,15 +247,20 @@ Sent from Smartek Digital website
               </p>
             )}
           </div>
+
         </div>
 
-        {/* Company */}
+
+        {/* =====================================================
+            COMPANY
+        ===================================================== */}
         <div className="mt-7">
           <label
             htmlFor="company"
             className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--text)]"
           >
             Company
+
             <span className="ml-2 font-normal normal-case tracking-normal text-gray-400">
               Optional
             </span>
@@ -248,16 +273,20 @@ Sent from Smartek Digital website
             placeholder="Your company name"
             autoComplete="organization"
             className={getInputClass("company")}
+            onChange={() => clearError("company")}
           />
         </div>
 
-        {/* Service */}
+
+        {/* =====================================================
+            SERVICE
+        ===================================================== */}
         <div className="mt-7">
           <label
             htmlFor="service"
             className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--text)]"
           >
-            How Can We Help?{" "}
+            What Can We Help With?{" "}
             <span className="text-[var(--primary)]">*</span>
           </label>
 
@@ -265,9 +294,7 @@ Sent from Smartek Digital website
             id="service"
             name="service"
             defaultValue=""
-            className={`${getInputClass(
-              "service"
-            )} cursor-pointer`}
+            className={`${getInputClass("service")} cursor-pointer`}
             onChange={() => clearError("service")}
           >
             <option value="" disabled>
@@ -278,16 +305,6 @@ Sent from Smartek Digital website
               Digital Marketing
             </option>
 
-            <option value="Performance Marketing">
-              Performance Marketing
-            </option>
-
-            <option value="SEO">SEO</option>
-
-            <option value="Web Development">
-              Web Development
-            </option>
-
             <option value="E-commerce">
               E-commerce
             </option>
@@ -296,7 +313,13 @@ Sent from Smartek Digital website
               Creative & Design
             </option>
 
-            <option value="Other">Other</option>
+            <option value="Not sure yet">
+              Not sure yet
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
           </select>
 
           {errors.service && (
@@ -306,8 +329,12 @@ Sent from Smartek Digital website
           )}
         </div>
 
-        {/* Message */}
+
+        {/* =====================================================
+            MESSAGE
+        ===================================================== */}
         <div className="mt-7">
+
           <div className="flex items-center justify-between gap-4">
             <label
               htmlFor="message"
@@ -337,10 +364,15 @@ Sent from Smartek Digital website
               {errors.message}
             </p>
           )}
+
         </div>
 
-        {/* Bottom */}
+
+        {/* =====================================================
+            SUBMIT
+        ===================================================== */}
         <div className="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+
           <p className="max-w-[320px] font-[var(--font-body)] text-[10px] leading-[1.7] text-gray-400">
             Clicking send will open your default email application with
             your enquiry details ready to send.
@@ -358,7 +390,9 @@ Sent from Smartek Digital website
               className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
           </button>
+
         </div>
+
       </form>
     </div>
   );
