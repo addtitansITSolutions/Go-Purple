@@ -67,7 +67,7 @@ const WhatWeDo = () => {
               <BarChart3 size={25} strokeWidth={1.7} />
             </div>
 
-            <div className="relative z-10">
+            <div className="relative z-10 text-white">
               <p className="mb-3 font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.16em] text-white/40">
                 Growth / Performance
               </p>
@@ -114,7 +114,7 @@ const WhatWeDo = () => {
                 Commerce / Experience
               </p>
 
-              <h3 className="font-[var(--font-display)] text-4xl font-semibold leading-[1] tracking-[-0.04em]">
+              <h3 className="font-[var(--font-display)] text-4xl font-semibold leading-[1] tracking-[-0.04em] text-white">
                 E-commerce
               </h3>
 

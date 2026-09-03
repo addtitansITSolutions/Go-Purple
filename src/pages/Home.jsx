@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import GoPurpleDifference from "../sections/home/GoPurpleDifference";
-// import AboutIntro from "../sections/home/AboutIntro";
 import Hero from "../sections/home/Hero";
 import WhatWeDo from "../sections/home/WhatWeDo";
-// import Services from "../sections/home/Services";
-// import WhyChooseUs from "../sections/home/WhyChooseUs";
+import ServicesPreview from "../sections/home/ServicesPreview"
+import SelectedWork from "../sections/home/SelectedWork";
+import Testimonials from "../sections/home/Testimonials";
 
 const Home = () => {
   return (
@@ -15,8 +15,9 @@ const Home = () => {
         <Hero />
         <WhatWeDo />
         <GoPurpleDifference />
-        {/* <Services /> */}
-        {/* <WhyChooseUs /> */}
+        <ServicesPreview />
+        <SelectedWork />
+        <Testimonials />
       </main>
       <Footer />
     </>
