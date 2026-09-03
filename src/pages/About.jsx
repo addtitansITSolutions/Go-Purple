@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-// import AboutHero from "../sections/about/AboutHero";
+import AboutHero from "../sections/about/AboutHero";
 // import WhatDrivesUs from "../sections/about/WhatDrivesUs";
 
 const About = () => {
@@ -9,8 +9,8 @@ const About = () => {
       <Navbar forceScrolled={true}/>
 
       <main>
-        {/* <AboutHero />
-        <WhatDrivesUs /> */}
+        <AboutHero />
+        {/* <WhatDrivesUs /> */}
         {/* More About sections will come here */}
       </main>
 
