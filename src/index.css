@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+/* ================================
+   GOPURPLE
+   Global Styles
+================================ */
+
+:root {
+  --primary: #9564DD;
+  --secondary: #E4DA72;
+
+  --dark: #111827;
+  --text: #4B5563;
+
+  --light: #F7F8F8;
+  --white: #FFFFFF;
+
+  --border: #E5E7EB;
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* ================================
+   Base
+================================ */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  background: var(--white);
+  color: var(--text);
+
+  font-family: var(--font-body);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+section {
+  width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================================
+   Selection
+================================ */
+
+::selection {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* ================================
+   Swiper
+================================ */
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #D1D5DB;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+/* ================================
+   Services Swiper
+================================ */
+
+.servicesSwiper {
+  padding-bottom: 55px;
+  overflow: visible;
+}
+
+.servicesSwiper .swiper-slide {
+  height: auto;
+}
+
+.servicesSwiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.servicesSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 30px;
+}
+
+/* ================================
+   Why Choose Us Swiper
+================================ */
+
+.whyChooseSwiper {
+  padding-bottom: 60px;
+}
+
+.whyChooseSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 35px;
+  bottom: auto;
+}
+
+/* ================================
+   Why Trust Us Swiper
+================================ */
+
+.whyTrustSwiper {
+  padding: 12px 0 !important;
+}
+
+/* ================================
+   Logo / Partner Marquee
+================================ */
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================
+   HERO SLIDER
+================================= */
+
+.hero-bg {
+  transform: scale(1);
+}
+
+/*
+  Every Swiper slide gets this class
+  while it is active.
+*/
+.swiper-slide-active .hero-bg {
+  animation: heroZoom 6.5s ease-out forwards;
+}
+
+@keyframes heroZoom {
+  0% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* =================================
+   HERO SLIDER PROGRESS
+================================= */
+
+.hero-progress-active {
+  width: 100%;
+  background: var(--primary);
+  animation: heroProgress 5.5s linear forwards;
+}
+
+@keyframes heroProgress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
