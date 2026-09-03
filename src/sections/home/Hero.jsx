@@ -152,7 +152,6 @@ const Hero = () => {
                 className="group inline-flex items-center gap-3 border border-white/20 px-6 py-3.5 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5"
               >
                 Our Work
-
                 <ArrowRight
                   size={15}
                   strokeWidth={1.8}
@@ -189,7 +188,7 @@ const Hero = () => {
               RIGHT VISUAL / PNG PLACEHOLDER
           ========================================== */}
 
-          <div className="relative flex min-h-[500px] items-center justify-center lg:min-h-[700px]">
+          <div className="relative flex min-h-[500px] items-center justify-center lg:min-h-[700px] hidden lg:block">
 
             {/* Glow behind image */}
             <div

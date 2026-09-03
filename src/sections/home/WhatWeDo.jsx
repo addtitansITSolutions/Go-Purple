@@ -16,16 +16,13 @@ const WhatWeDo = () => {
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[var(--secondary)]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
         {/* =====================================================
             INTRO
         ===================================================== */}
         <div className="mb-16 grid gap-10 lg:grid-cols-[0.8fr_1.8fr] lg:items-end lg:mb-24">
-
           <div>
             <div className="mb-5 flex items-center gap-3">
               {/* <span className="h-px w-10 bg-[var(--primary)]" /> */}
-
               <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
                 What We Do
               </span>

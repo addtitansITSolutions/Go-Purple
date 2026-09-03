@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import GoPurpleDifference from "../sections/home/GoPurpleDifference";
 // import AboutIntro from "../sections/home/AboutIntro";
 import Hero from "../sections/home/Hero";
 import WhatWeDo from "../sections/home/WhatWeDo";
@@ -13,6 +14,7 @@ const Home = () => {
       <main>
         <Hero />
         <WhatWeDo />
+        <GoPurpleDifference />
         {/* <Services /> */}
         {/* <WhyChooseUs /> */}
       </main>
