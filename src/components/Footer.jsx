@@ -99,12 +99,13 @@ const Footer = () => {
           <div>
             <a
               href="/"
-              className="inline-flex items-center gap-2 font-[var(--font-display)] text-2xl font-bold tracking-[-0.04em]"
+              className="inline-flex items-center"
             >
-              GO
-              <span className="text-[var(--primary)]">
-                PURPLE
-              </span>
+              <img
+                src="/logo/Logo_GPN.png"
+                alt="Smartek Digital"
+                className="h-auto w-[150px] object-contain sm:w-[165px]"
+              />
             </a>
 
             <p className="mt-5 max-w-xs font-[var(--font-body)] text-sm leading-6 text-white/50">

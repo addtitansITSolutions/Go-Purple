@@ -75,48 +75,19 @@ const Navbar = ({ forceScrolled = false }) => {
           Navbar
       -------------------------------- */}
       <div className="relative mx-auto flex h-[88px] w-full max-w-[1440px] items-center justify-between px-6 lg:px-10 xl:px-12">
-
-        {/* --------------------------------
-            GoPurple Logo
-        -------------------------------- */}
+        {/* Logo */}
         <NavLink
           to="/"
           onClick={() => setMobileOpen(false)}
-          className="relative z-[110] flex items-center gap-3"
+          className="relative z-[110] flex items-center"
         >
-          {/* Purple Brand Mark */}
-          <div className="relative flex h-11 w-11 items-center justify-center">
-            <div className="absolute left-0 top-0 h-7 w-7 rounded-sm bg-[var(--primary)]" />
-
-            <div className="absolute bottom-0 right-0 h-7 w-7 rounded-sm bg-[var(--secondary)]" />
-
-            <span className="relative z-10 font-[var(--font-display)] text-sm font-bold text-white">
-              GP
-            </span>
-          </div>
-
-          {/* Brand Name */}
-          <div className="hidden leading-none sm:block">
-            <span
-              className={`block font-[var(--font-display)] text-[17px] font-bold tracking-[0.08em] transition-colors duration-500 ${
-                scrolled
-                  ? "text-[var(--dark)]"
-                  : "text-white"
-              }`}
-            >
-              GO<span className="text-[var(--primary)]">PURPLE</span>
-            </span>
-
-            <span
-              className={`mt-1 block text-[8px] font-semibold tracking-[0.3em] transition-colors duration-500 ${
-                scrolled
-                  ? "text-[var(--secondary)]"
-                  : "text-white/70"
-              }`}
-            >
-              DIGITAL • ECOMMERCE • CREATIVE
-            </span>
-          </div>
+          <img
+            src="/logo/Logo_GPN.png"
+            alt="Smartek Digital"
+            className={`h-auto w-[150px] object-contain transition-all duration-500 sm:w-[165px] ${
+              scrolled ? "" : "brightness-100"
+            }`}
+          />
         </NavLink>
 
         {/* --------------------------------
