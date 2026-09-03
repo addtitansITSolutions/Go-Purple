@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 import { NavLink } from "react-router-dom";
+
+import {
+  DesktopServicesMenu,
+  MobileServicesMenu,
+  MobileServicesToggle,
+} from "./ServicesMenu";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -13,7 +19,12 @@ const navItems = [
 const Navbar = ({ forceScrolled = false }) => {
   const [scrolled, setScrolled] = useState(forceScrolled);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
+  /* --------------------------------
+     Scroll Detection
+  -------------------------------- */
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(forceScrolled || window.scrollY > 40);
@@ -29,7 +40,7 @@ const Navbar = ({ forceScrolled = false }) => {
   }, [forceScrolled]);
 
   /* --------------------------------
-     Lock page when mobile menu opens
+     Lock Page When Mobile Menu Opens
   -------------------------------- */
   useEffect(() => {
     if (mobileOpen) {
@@ -47,12 +58,13 @@ const Navbar = ({ forceScrolled = false }) => {
   }, [mobileOpen]);
 
   /* --------------------------------
-     Close mobile menu on resize
+     Close Mobile Menu On Resize
   -------------------------------- */
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setMobileOpen(false);
+        setMobileServicesOpen(false);
       }
     };
 
@@ -63,6 +75,14 @@ const Navbar = ({ forceScrolled = false }) => {
     };
   }, []);
 
+  /* --------------------------------
+     Close Mobile Menu
+  -------------------------------- */
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setMobileServicesOpen(false);
+  };
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-[100] transition-all duration-500 ${
@@ -71,58 +91,108 @@ const Navbar = ({ forceScrolled = false }) => {
           : "bg-transparent"
       }`}
     >
-      {/* --------------------------------
-          Navbar
-      -------------------------------- */}
       <div className="relative mx-auto flex h-[88px] w-full max-w-[1440px] items-center justify-between px-6 lg:px-10 xl:px-12">
-        {/* Logo */}
+
+        {/* =========================================
+            LOGO
+        ========================================= */}
         <NavLink
           to="/"
-          onClick={() => setMobileOpen(false)}
+          onClick={closeMobileMenu}
           className="relative z-[110] flex items-center"
         >
           <img
             src="/logo/Logo_GPN.png"
-            alt="Smartek Digital"
-            className={`h-auto w-[150px] object-contain transition-all duration-500 sm:w-[165px] ${
-              scrolled ? "" : "brightness-100"
-            }`}
+            alt="GoPurple"
+            className="h-auto w-[150px] object-contain transition-all duration-500 sm:w-[165px]"
           />
         </NavLink>
 
-        {/* --------------------------------
-            Desktop Navigation
-        -------------------------------- */}
+        {/* =========================================
+            DESKTOP NAVIGATION
+        ========================================= */}
         <nav className="hidden items-center gap-8 lg:flex xl:gap-10">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.name}
-              to={item.path}
-              style={{
-                color: scrolled ? "var(--dark)" : "#ffffff",
-              }}
-              className="group relative py-2 font-[var(--font-body)] text-[12px] font-semibold uppercase tracking-[0.12em] transition-colors duration-300"
-            >
-              {({ isActive }) => (
-                <>
-                  {item.name}
+          {navItems.map((item) => {
+            /* ---------------------------------------
+               SERVICES
+            --------------------------------------- */
+            if (item.name === "Services") {
+              return (
+                <div
+                  key={item.name}
+                  className="relative flex h-[88px] items-center"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <NavLink
+                    to={item.path}
+                    style={{ color: scrolled ? "var(--dark)" : "#ffffff" }}
+                    className="group relative flex items-center gap-1.5 py-2 font-[var(--font-body)] text-[12px] font-semibold uppercase tracking-[0.12em] transition-colors duration-300"
+                  >
+                    {({ isActive }) => (
+                      <>
+                        <span>Services</span>
 
-                  <span
-                    className={`absolute bottom-0 left-0 h-[1px] bg-[var(--primary)] transition-all duration-300 ${
-                      isActive
-                        ? "w-full"
-                        : "w-0 group-hover:w-full"
-                    }`}
+                        <ChevronDown
+                          size={13}
+                          strokeWidth={2}
+                          className={`transition-transform duration-300 ${
+                            servicesOpen ? "rotate-180" : ""
+                          }`}
+                        />
+
+                        <span
+                          className={`absolute bottom-0 left-0 h-[1px] bg-[var(--primary)] transition-all duration-300 ${
+                            isActive || servicesOpen
+                              ? "w-full"
+                              : "w-0 group-hover:w-full"
+                          }`}
+                        />
+                      </>
+                    )}
+                  </NavLink>
+
+                  <DesktopServicesMenu
+                    isOpen={servicesOpen}
+                    onClose={() => setServicesOpen(false)}
                   />
-                </>
-              )}
-            </NavLink>
-          ))}
+                </div>
+              );
+            }
+
+            /* ---------------------------------------
+               NORMAL DESKTOP NAV ITEMS
+            --------------------------------------- */
+            return (
+              <NavLink
+                key={item.name}
+                to={item.path}
+                style={{
+                  color: scrolled ? "var(--dark)" : "#ffffff",
+                }}
+                className="group relative py-2 font-[var(--font-body)] text-[12px] font-semibold uppercase tracking-[0.12em] transition-colors duration-300"
+              >
+                {({ isActive }) => (
+                  <>
+                    {item.name}
+
+                    <span
+                      className={`absolute bottom-0 left-0 h-[1px] bg-[var(--primary)] transition-all duration-300 ${
+                        isActive
+                          ? "w-full"
+                          : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </>
+                )}
+              </NavLink>
+            );
+          })}
         </nav>
 
-        {/* --------------------------------
-            Desktop CTA
-        -------------------------------- */}
+        {/* =========================================
+            DESKTOP CTA
+        ========================================= */}
         <div className="hidden lg:block">
           <NavLink
             to="/contact"
@@ -130,7 +200,7 @@ const Navbar = ({ forceScrolled = false }) => {
               color: scrolled ? "var(--dark)" : "#ffffff",
               borderColor: scrolled
                 ? "var(--primary)"
-                : "rgba(255, 255, 255, 0.6)",
+                : "rgba(255,255,255,0.6)",
             }}
             className={`group flex items-center gap-2 border px-5 py-3 font-[var(--font-body)] text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 ${
               scrolled
@@ -148,14 +218,12 @@ const Navbar = ({ forceScrolled = false }) => {
           </NavLink>
         </div>
 
-        {/* --------------------------------
-            Mobile Menu Button
-        -------------------------------- */}
+        {/* =========================================
+            MOBILE MENU BUTTON
+        ========================================= */}
         <button
           type="button"
-          aria-label={
-            mobileOpen ? "Close menu" : "Open menu"
-          }
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((prev) => !prev)}
           className={`relative z-[110] flex h-11 w-11 items-center justify-center transition-colors duration-300 lg:hidden ${
@@ -173,58 +241,116 @@ const Navbar = ({ forceScrolled = false }) => {
           )}
         </button>
 
-        {/* --------------------------------
-            Mobile Menu
-        -------------------------------- */}
+        {/* =========================================
+            MOBILE MENU
+        ========================================= */}
         <div
-          className={`absolute inset-x-0 top-0 h-screen bg-[var(--dark)] transition-all duration-500 lg:hidden ${
+          className={`absolute inset-x-0 top-0 h-screen overflow-y-auto bg-[var(--dark)] transition-all duration-500 lg:hidden ${
             mobileOpen
               ? "visible translate-y-0 opacity-100"
-              : "invisible -translate-y-3 pointer-events-none opacity-0"
+              : "invisible pointer-events-none -translate-y-3 opacity-0"
           }`}
         >
-          <div className="flex h-full flex-col justify-center px-8 sm:px-12">
+          <div className="flex min-h-full flex-col justify-center px-8 py-28 sm:px-12">
 
-            {/* Mobile Navigation */}
+            {/* ---------------------------------------
+                MOBILE NAVIGATION
+            --------------------------------------- */}
             <nav className="flex flex-col gap-5">
-              {navItems.map((item, index) => (
-                <NavLink
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setMobileOpen(false)}
-                  className={({ isActive }) =>
-                    `group flex items-center gap-4 font-[var(--font-display)] text-4xl font-light transition-colors duration-300 sm:text-5xl ${
-                      isActive
-                        ? "text-[var(--primary)]"
-                        : "text-white hover:text-[var(--primary)]"
-                    }`
-                  }
-                >
-                  {({ isActive }) => (
-                    <>
-                      <span
-                        className={`text-xs transition-colors duration-300 ${
-                          isActive
-                            ? "text-[var(--primary)]"
-                            : "text-white/30"
-                        }`}
-                      >
-                        0{index + 1}
-                      </span>
+              {navItems.map((item, index) => {
+                /* -------------------------------------
+                   MOBILE SERVICES
+                ------------------------------------- */
+                if (item.name === "Services") {
+                  return (
+                    <div key={item.name}>
+                      <div className="flex items-center gap-4">
 
-                      {item.name}
+                        {/* Services Link */}
+                        <NavLink
+                          to={item.path}
+                          onClick={closeMobileMenu}
+                          className={({ isActive }) =>
+                            `group flex flex-1 items-center gap-4 font-[var(--font-display)] text-4xl font-light transition-colors duration-300 sm:text-5xl ${
+                              isActive
+                                ? "text-[var(--primary)]"
+                                : "text-white hover:text-[var(--primary)]"
+                            }`
+                          }
+                        >
+                          <span
+                            className={`text-xs ${
+                              mobileServicesOpen
+                                ? "text-[var(--primary)]"
+                                : "text-white/30"
+                            }`}
+                          >
+                            0{index + 1}
+                          </span>
 
-                      <ArrowUpRight
-                        size={20}
-                        className="ml-1 opacity-0 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:opacity-100"
+                          Services
+                        </NavLink>
+
+                        {/* Services Toggle */}
+                        <MobileServicesToggle
+                          isOpen={mobileServicesOpen}
+                          setIsOpen={setMobileServicesOpen}
+                        />
+                      </div>
+
+                      {/* Services Dropdown */}
+                      <MobileServicesMenu
+                        isOpen={mobileServicesOpen}
+                        onClose={closeMobileMenu}
                       />
-                    </>
-                  )}
-                </NavLink>
-              ))}
+                    </div>
+                  );
+                }
+
+                /* -------------------------------------
+                   NORMAL MOBILE ITEMS
+                ------------------------------------- */
+                return (
+                  <NavLink
+                    key={item.name}
+                    to={item.path}
+                    onClick={closeMobileMenu}
+                    className={({ isActive }) =>
+                      `group flex items-center gap-4 font-[var(--font-display)] text-4xl font-light transition-colors duration-300 sm:text-5xl ${
+                        isActive
+                          ? "text-[var(--primary)]"
+                          : "text-white hover:text-[var(--primary)]"
+                      }`
+                    }
+                  >
+                    {({ isActive }) => (
+                      <>
+                        <span
+                          className={`text-xs transition-colors duration-300 ${
+                            isActive
+                              ? "text-[var(--primary)]"
+                              : "text-white/30"
+                          }`}
+                        >
+                          0{index + 1}
+                        </span>
+
+                        {item.name}
+
+                        <ArrowUpRight
+                          size={20}
+                          className="ml-1 opacity-0 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:opacity-100"
+                        />
+                      </>
+                    )}
+                  </NavLink>
+                );
+              })}
             </nav>
 
-            {/* Mobile Contact */}
+            {/* ---------------------------------------
+                MOBILE CONTACT
+            --------------------------------------- */}
             <div className="mt-14 border-t border-white/10 pt-6">
               <p className="font-[var(--font-body)] text-xs uppercase tracking-[0.2em] text-white/40">
                 Start a conversation
@@ -238,7 +364,9 @@ const Navbar = ({ forceScrolled = false }) => {
               </a>
             </div>
 
-            {/* Mobile Services Tagline */}
+            {/* ---------------------------------------
+                MOBILE TAGLINE
+            --------------------------------------- */}
             <p className="mt-8 max-w-sm font-[var(--font-body)] text-xs leading-relaxed text-white/30">
               Digital Marketing · E-commerce · Creative Design
             </p>

@@ -192,7 +192,7 @@ const Footer = () => {
                 />
 
                 <span className="font-[var(--font-body)] text-sm text-white/70 transition-colors duration-300 group-hover:text-white">
-                  info@gopurple.com
+                  info@gopurplenet.com
                 </span>
               </a>
 
@@ -205,7 +205,7 @@ const Footer = () => {
                 />
 
                 <span className="font-[var(--font-body)] text-sm leading-6 text-white/70">
-                  Your office address goes here.
+                  India
                 </span>
               </div>
 
@@ -219,7 +219,7 @@ const Footer = () => {
         <div className="flex flex-col gap-5 border-t border-white/10 py-7 sm:flex-row sm:items-center sm:justify-between">
 
           <p className="font-[var(--font-body)] text-xs text-white/40">
-            © {new Date().getFullYear()} GoPurple. All rights reserved.
+            © {new Date().getFullYear()} GoPurplenet. All rights reserved.
           </p>
 
           <div className="flex items-center gap-6">

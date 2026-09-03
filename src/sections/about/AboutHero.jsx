@@ -102,7 +102,7 @@ const AboutHero = () => {
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]">
                 <motion.img
-                  src="https://images.pexels.com/photos/7438096/pexels-photo-7438096.jpeg?cs=srgb&dl=pexels-cottonbro-7438096.jpg&fm=jpg"
+                  src="/Aboutus/aboutus.jpg"
                   alt="Creative team working together"
                   className="h-full w-full object-cover"
                   initial={{ scale: 1.1 }}
