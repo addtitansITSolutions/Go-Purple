@@ -113,7 +113,7 @@ const GoPurpleDifference = () => {
             <div className="group relative overflow-hidden rounded-[1.75rem] bg-white">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/7438096/pexels-photo-7438096.jpeg?cs=srgb&dl=pexels-cottonbro-7438096.jpg&fm=jpg"
+                  src="/HeroBg/Howweproceed.jpg"
                   alt="Creative team collaborating in a modern workspace"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
