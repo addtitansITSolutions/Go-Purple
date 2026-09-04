@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowUpRight,
   BarChart3,
@@ -8,6 +8,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const services = [
   {
@@ -62,63 +63,237 @@ const services = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const fadeUp = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
+const ease = [0.22, 1, 0.36, 1];
 
 const ServicesPreview = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
+
+  /*
+   * 5 cards
+   * Card height: 430px
+   * Gap: 24px
+   *
+   * Total card stack:
+   * (430 × 5) + (24 × 4) = 2246px
+   *
+   * Visible viewport:
+   * 430px
+   *
+   * Required movement:
+   * 2246 - 430 = 1816px
+   *
+   * We use a pixel-based transform so the final card
+   * reaches the viewport completely before the section releases.
+   */
+  const cardsY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0px", "-1816px"]
+  );
+
   return (
-    <section className="relative overflow-hidden bg-[var(--dark)] py-24 text-white sm:py-28 lg:py-36">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <section
+      ref={sectionRef}
+      className="relative bg-[var(--dark)] text-white"
+    >
+      {/* =====================================================
+          DESKTOP PINNED EXPERIENCE
+      ===================================================== */}
+      <div className="hidden lg:block">
+        <div className="relative h-[2700px]">
 
-        {/* =====================================================
-            HEADER
-        ===================================================== */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={containerVariants}
-          className="mb-16 grid gap-8 lg:mb-24 lg:grid-cols-12 lg:items-end"
-        >
-          <motion.div
-            variants={fadeUp}
-            className="lg:col-span-4"
-          >
-            <div className="flex items-center gap-3">
-              {/* <span className="h-px w-10 bg-[var(--secondary)]" /> */}
+          {/* Sticky viewport */}
+          <div className="sticky top-0 flex h-screen items-center overflow-hidden">
 
-              <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.2em] text-[var(--secondary)]">
-                Our Capabilities
-              </span>
+            <div className="mx-auto w-full max-w-7xl px-10">
+
+              {/* =============================================
+                  HEADER
+              ============================================= */}
+              <div className="grid grid-cols-12 items-end gap-8">
+
+                <div className="col-span-4 self-start pt-4">
+                  <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.2em] text-[var(--secondary)]">
+                    Our Capabilities
+                  </span>
+
+                  <p className="mt-6 max-w-xs font-[var(--font-body)] text-sm leading-6 text-white/40">
+                    A focused set of services designed to help brands attract
+                    attention, create demand and turn digital activity into
+                    meaningful growth.
+                  </p>
+                </div>
+
+                <div className="col-span-8">
+                  <h2 className="font-[var(--font-display)] text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-6xl xl:text-7xl">
+                    Everything your brand
+                    <br />
+                    needs to{" "}
+                    <span className="text-[var(--primary)]">
+                      move forward.
+                    </span>
+                  </h2>
+                </div>
+              </div>
+
+              {/* =============================================
+                  CARD VIEWPORT
+              ============================================= */}
+              <div className="relative mt-12 h-[430px] overflow-hidden rounded-[28px]">
+
+                <motion.div
+                  style={{ y: cardsY }}
+                  className="absolute left-0 top-0 w-full"
+                >
+                  <div className="space-y-6">
+
+                    {services.map((service) => {
+                      const Icon = service.icon;
+
+                      return (
+                        <div
+                          key={service.number}
+                          className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-[#171323]"
+                        >
+                          <div className="grid h-[430px] grid-cols-12">
+
+                            {/* =================================
+                                CONTENT
+                            ================================= */}
+                            <div className="col-span-7 flex flex-col justify-between p-10 xl:p-12">
+
+                              <div className="flex items-center justify-between">
+
+                                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--primary)]/15 text-[var(--primary)]">
+                                  <Icon
+                                    size={20}
+                                    strokeWidth={1.6}
+                                  />
+                                </div>
+
+                                <span className="font-[var(--font-display)] text-sm font-semibold text-white/25">
+                                  {service.number}
+                                </span>
+                              </div>
+
+                              <div>
+
+                                <h3 className="max-w-2xl font-[var(--font-display)] text-5xl font-semibold leading-[0.95] tracking-[-0.05em] xl:text-6xl">
+                                  {service.title}
+                                </h3>
+
+                                <p className="mt-5 max-w-xl font-[var(--font-body)] text-sm leading-7 text-white/50">
+                                  {service.description}
+                                </p>
+
+                                <div className="mt-6 flex flex-wrap gap-2">
+                                  {service.tags.map((tag) => (
+                                    <span
+                                      key={tag}
+                                      className="rounded-full border border-white/10 px-3 py-1.5 font-[var(--font-body)] text-[10px] font-semibold uppercase tracking-[0.1em] text-white/45"
+                                    >
+                                      {tag}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+
+                              <Link
+                                to="/services"
+                                className="group/link flex w-fit items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em] text-white"
+                              >
+                                Explore service
+
+                                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[var(--dark)] transition-all duration-300 group-hover/link:rotate-45 group-hover/link:bg-[var(--secondary)]">
+                                  <ArrowUpRight size={16} />
+                                </span>
+                              </Link>
+
+                            </div>
+
+                            {/* =================================
+                                IMAGE
+                            ================================= */}
+                            <div className="relative col-span-5 overflow-hidden">
+
+                              <motion.img
+                                src={service.image}
+                                alt={service.title}
+                                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                              />
+
+                              <div className="absolute inset-0 bg-gradient-to-r from-[#171323] via-transparent to-transparent opacity-90" />
+
+                              <div className="absolute bottom-8 right-8">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[var(--dark)] transition-all duration-300 group-hover:rotate-45 group-hover:bg-[var(--secondary)]">
+                                  <ArrowUpRight size={18} />
+                                </div>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </div>
+                      );
+                    })}
+
+                  </div>
+                </motion.div>
+
+              </div>
+
+              {/* =============================================
+                  SCROLL INDICATOR
+              ============================================= */}
+              <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-6">
+
+                <p className="font-[var(--font-body)] text-xs text-white/35">
+                  Scroll to explore our capabilities
+                </p>
+
+                <div className="flex items-center gap-2">
+                  {services.map((service) => (
+                    <span
+                      key={service.number}
+                      className="font-[var(--font-display)] text-[10px] font-semibold text-white/25"
+                    >
+                      {service.number}
+                    </span>
+                  ))}
+                </div>
+
+              </div>
+
             </div>
-          </motion.div>
+          </div>
+        </div>
+      </div>
 
+      {/* =====================================================
+          TABLET / MOBILE
+      ===================================================== */}
+      <div className="block py-20 sm:py-24 lg:hidden">
+
+        <div className="mx-auto max-w-3xl px-5 sm:px-8">
+
+          {/* Header */}
           <motion.div
-            variants={fadeUp}
-            className="lg:col-span-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease }}
+            className="mb-12"
           >
-            <h2 className="max-w-5xl font-[var(--font-display)] text-4xl font-semibold leading-[1.05] tracking-[-0.045em] sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.2em] text-[var(--secondary)]">
+              Our Capabilities
+            </span>
+
+            <h2 className="mt-5 font-[var(--font-display)] text-4xl font-semibold leading-[1] tracking-[-0.05em] sm:text-5xl">
               Everything your brand
               <br />
               needs to{" "}
@@ -126,190 +301,112 @@ const ServicesPreview = () => {
                 move forward.
               </span>
             </h2>
+
+            <p className="mt-6 max-w-xl font-[var(--font-body)] text-sm leading-6 text-white/45">
+              A focused set of services designed to help brands attract
+              attention, create demand and grow.
+            </p>
           </motion.div>
-        </motion.div>
 
+          {/* Cards */}
+          <div className="space-y-5">
 
-        {/* =====================================================
-            SERVICES
-        ===================================================== */}
-        <div className="space-y-5 lg:space-y-7">
+            {services.map((service, index) => {
+              const Icon = service.icon;
 
-          {services.map((service, index) => {
-            const Icon = service.icon;
+              return (
+                <motion.article
+                  key={service.number}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{
+                    once: true,
+                    amount: 0.12,
+                  }}
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.05,
+                    ease,
+                  }}
+                  className="overflow-hidden rounded-[24px] border border-white/10 bg-[#171323]"
+                >
 
-            return (
-              <motion.div
-                key={service.number}
-                initial={{
-                  opacity: 0,
-                  y: 60,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.15,
-                }}
-                transition={{
-                  duration: 0.8,
-                  delay: index * 0.08,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.04]"
-              >
-                <div className="grid lg:grid-cols-12">
+                  <div className="relative h-[250px] overflow-hidden sm:h-[300px]">
 
-                  {/* -----------------------------------------
-                      SERVICE INFORMATION
-                  ----------------------------------------- */}
-                  <div className="relative z-10 flex flex-col justify-between p-7 sm:p-9 lg:col-span-7 lg:min-h-[460px] lg:p-12">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover"
+                    />
 
-                    <div className="flex items-center justify-between">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#171323] via-transparent to-transparent" />
 
-                      <motion.div
-                        whileHover={{ rotate: 45 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--primary)]/15 text-[var(--primary)]"
-                      >
-                        <Icon size={21} strokeWidth={1.6} />
-                      </motion.div>
-
-                      <span className="font-[var(--font-display)] text-sm font-semibold text-white/30">
-                        {service.number}
-                      </span>
-
+                    <div className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary)]/20 text-[var(--primary)]">
+                      <Icon size={18} strokeWidth={1.6} />
                     </div>
 
+                    <span className="absolute right-5 top-5 font-[var(--font-display)] text-xs font-semibold text-white/50">
+                      {service.number}
+                    </span>
 
-                    <div className="mt-16 lg:mt-0">
+                  </div>
 
-                      <h3 className="font-[var(--font-display)] text-4xl font-semibold leading-[1] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
-                        {service.title}
-                      </h3>
+                  <div className="p-6 sm:p-8">
 
-                      <p className="mt-6 max-w-lg font-[var(--font-body)] text-sm leading-7 text-white/55 sm:text-base">
-                        {service.description}
-                      </p>
+                    <h3 className="font-[var(--font-display)] text-3xl font-semibold leading-none tracking-[-0.045em]">
+                      {service.title}
+                    </h3>
 
+                    <p className="mt-4 font-[var(--font-body)] text-sm leading-6 text-white/50">
+                      {service.description}
+                    </p>
 
-                      {/* Tags */}
-                      <div className="mt-7 flex flex-wrap gap-2">
-                        {service.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="rounded-full border border-white/10 px-3 py-1.5 font-[var(--font-body)] text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {service.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-white/10 px-3 py-1.5 font-[var(--font-body)] text-[9px] font-semibold uppercase tracking-[0.1em] text-white/45"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
 
-
-                    {/* Explore */}
                     <Link
                       to="/services"
-                      className="mt-10 flex w-fit items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em] text-white"
+                      className="mt-7 flex w-fit items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em]"
                     >
                       Explore service
 
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[var(--dark)] transition-all duration-300 group-hover:rotate-45 group-hover:bg-[var(--secondary)]">
-                        <ArrowUpRight size={16} />
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[var(--dark)]">
+                        <ArrowUpRight size={15} />
                       </span>
                     </Link>
 
                   </div>
+                </motion.article>
+              );
+            })}
 
+          </div>
 
-                  {/* -----------------------------------------
-                      SERVICE IMAGE
-                  ----------------------------------------- */}
-                  <div className="relative min-h-[300px] overflow-hidden lg:col-span-5 lg:min-h-[460px]">
+          {/* CTA */}
+          <div className="mt-10 border-t border-white/10 pt-7">
+            <Link
+              to="/services"
+              className="group inline-flex items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em]"
+            >
+              View all services
 
-                    <motion.img
-                      src={service.image}
-                      alt={service.title}
-                      loading="lazy"
-                      className="absolute inset-0 h-full w-full object-cover"
-                      initial={{
-                        scale: 1.12,
-                      }}
-                      whileInView={{
-                        scale: 1,
-                      }}
-                      viewport={{
-                        once: true,
-                        amount: 0.2,
-                      }}
-                      transition={{
-                        duration: 1.2,
-                        ease: [0.22, 1, 0.36, 1],
-                      }}
-                    />
-
-                    {/* Image Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] via-transparent to-transparent opacity-70 lg:opacity-90" />
-
-                    {/* Hover overlay */}
-                    <motion.div
-                      className="absolute inset-0 bg-[var(--primary)]/20"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                    />
-
-                  </div>
-
-                </div>
-              </motion.div>
-            );
-          })}
+              <ArrowUpRight
+                size={16}
+                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
+            </Link>
+          </div>
 
         </div>
-
-
-        {/* =====================================================
-            BOTTOM CTA
-        ===================================================== */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.3,
-          }}
-          transition={{
-            duration: 0.7,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="mt-12 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between lg:mt-16"
-        >
-          <p className="max-w-xl font-[var(--font-body)] text-sm leading-6 text-white/45">
-            Need something more specific? We can build a strategy around
-            your exact business goals.
-          </p>
-
-          <Link
-            to="/services"
-            className="group inline-flex w-fit items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em] text-white"
-          >
-            View all services
-
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--dark)] transition-all duration-300 group-hover:rotate-45">
-              <ArrowUpRight size={16} />
-            </span>
-          </Link>
-        </motion.div>
-
       </div>
     </section>
   );

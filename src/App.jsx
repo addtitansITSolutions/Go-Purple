@@ -7,12 +7,14 @@ import Contact from './pages/Contact'
 import "./App.css"
 import DigitalMarketing from './pages/services/DigitalMarketing'
 import Project from './pages/Project'
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
 const App = () => {
   return (
     <div>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/about' element={<About />} />

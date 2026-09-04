@@ -204,7 +204,7 @@ const Footer = () => {
                 />
 
                 <span className="font-[var(--font-body)] text-sm leading-6 text-white/70">
-                  India
+                  Go Purple Nut Creations Pvt. Ltd. Ghaziabad , Uttar Pradesh 201016 . India
                 </span>
               </div>
 
