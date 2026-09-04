@@ -24,20 +24,19 @@ const WhatWeDo = () => {
             <div className="mb-5 flex items-center gap-3">
               {/* <span className="h-px w-10 bg-[var(--primary)]" /> */}
               <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
-                What We Do
+                Why Choose Us
               </span>
             </div>
 
             <p className="max-w-xs font-[var(--font-body)] text-sm leading-6 text-[var(--text)]">
-              Strategy, creativity and technology working together to build
-              brands that move forward.
+              We bring these core services together so they work as one connected engine, not five separate efforts.
             </p>
           </div>
 
           <div>
             <h2 className="max-w-5xl font-[var(--font-display)] text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-[var(--dark)] sm:text-5xl md:text-6xl lg:text-7xl">
-              We make digital{" "}
-              <span className="text-[var(--primary)]">work harder.</span>
+             A Holistic partner that{" "}
+              <span className="text-[var(--primary)]">moves your marketing needle.</span>
             </h2>
           </div>
         </div>
@@ -73,14 +72,13 @@ const WhatWeDo = () => {
               </p>
 
               <h3 className="max-w-lg font-[var(--font-display)] text-4xl font-semibold leading-[1] tracking-[-0.04em] sm:text-5xl">
-                Digital
+                Affiliate
                 <br />
                 Marketing
               </h3>
 
               <p className="mt-6 max-w-md font-[var(--font-body)] text-sm leading-6 text-white/55">
-                Turn attention into action through smarter campaigns,
-                performance strategy, social media and search.
+                Reward-based partnerships built to drive real growth. We build and manage affiliate networks with no wasted spend.
               </p>
             </div>
 

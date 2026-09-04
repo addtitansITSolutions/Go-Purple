@@ -95,21 +95,21 @@ const AboutStory = () => {
             className="flex flex-col justify-center"
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              GoPurple was built around the idea that great digital work
-              happens when strategy and creativity work side by side. Not as
-              separate disciplines, but as one connected way of thinking.
+              Go Purple Nut helps businesses move through that change with a clear head. We know good
+              decisions come from real data paired with a solid plan, not guesswork. Built on deep expertise across
+              affiliate, performance, digital, e-commerce, and mobile performance marketing, we build every
+              campaign around the metrics that matter to your business. And because what gets measured gets
+              improved, we track those same numbers and report on performance every single week.
             </p>
 
             <p className="mt-6 font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              From growing a brand online to creating better e-commerce
-              experiences and memorable visual identities, we focus on work
-              that has a clear purpose and a measurable impact.
+              We are not trying to be your &quot;creative partner&quot; in some vague sense of the phrase. We want to be
+              the team that turns your marketing budget into results you can build on.
             </p>
 
             <p className="mt-6 font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              We don't believe in creating digital noise. We believe in
-              finding the right idea, giving it the right direction, and
-              turning it into something people remember.
+              Instead of chasing quick wins that fade fast, we build marketing systems meant to keep producing
+              value long after launch.
             </p>
 
             {/* Small Divider */}

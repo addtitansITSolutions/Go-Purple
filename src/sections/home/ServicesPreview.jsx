@@ -2,41 +2,63 @@ import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   BarChart3,
-  Palette,
   ShoppingBag,
+  Share2,
+  TrendingUp,
+  Smartphone,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   {
     number: "01",
-    title: "Digital Marketing",
+    title: "Affiliate Marketing",
     description:
-      "Build visibility, attract the right audience and turn digital attention into meaningful business growth.",
-    tags: ["Social Media", "Performance", "SEO"],
-    icon: BarChart3,
+      "Reward-based partnerships built to drive real growth. We build and manage affiliate networks with no wasted spend.",
+    tags: ["Partnerships", "Affiliates", "ROI"],
+    icon: Share2,
     image:
       "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
   {
     number: "02",
-    title: "E-commerce",
+    title: "Performance Marketing",
     description:
-      "Create seamless shopping experiences that connect your products with the people most likely to buy them.",
-    tags: ["Storefronts", "Conversion", "Growth"],
-    icon: ShoppingBag,
+      "Cross-channel campaigns built around a clear business goal and refined continually to protect your return.",
+    tags: ["Paid Ads", "Optimization", "Conversion"],
+    icon: TrendingUp,
     image:
       "https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
   {
     number: "03",
-    title: "Creative & Design",
+    title: "Digital Marketing",
     description:
-      "Give your brand a distinctive visual language through thoughtful design, content and digital experiences.",
-    tags: ["Branding", "UI / UX", "Creative"],
-    icon: Palette,
+      "Search, paid advertising, content, and analytics working together to attract the right audience and turn them into customers.",
+    tags: ["SEO", "Content", "Analytics"],
+    icon: BarChart3,
     image:
       "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    number: "04",
+    title: "Ecommerce Marketing",
+    description:
+      "Full support for online brands, from the moment someone discovers your store to the day they become a repeat customer.",
+    tags: ["Storefronts", "Retention", "Growth"],
+    icon: ShoppingBag,
+    image:
+      "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    number: "05",
+    title: "Mobile Performance Marketing",
+    description:
+      "Mobile campaigns built around installs, signups, and in-app actions you can track and improve.",
+    tags: ["App Growth", "Installs", "In-App Actions"],
+    icon: Smartphone,
+    image:
+      "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
 ];
 

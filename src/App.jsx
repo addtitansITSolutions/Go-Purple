@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import "./App.css"
+import DigitalMarketing from './pages/services/DigitalMarketing'
+import Project from './pages/Project'
 
 
 
@@ -15,6 +17,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/services/digital-marketing' element={<DigitalMarketing />} />
+          <Route path="/projects" element={<Project />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       <Toaster position="top-right" reverseOrder={false} />

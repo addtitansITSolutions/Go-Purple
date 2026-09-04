@@ -48,17 +48,16 @@ const AboutHero = () => {
 
             {/* Heading */}
             <h1 className="max-w-2xl font-[var(--font-display)] text-4xl font-semibold leading-[1.04] tracking-[-0.04em] sm:text-5xl lg:text-[64px]">
-              We believe better ideas deserve{" "}
+              Built To Deliver Results{" "}
               <span className="text-[var(--primary)]">
-                better digital.
+                That Hold Up
               </span>
             </h1>
 
             {/* Description */}
             <p className="mt-6 max-w-xl font-[var(--font-body)] text-sm leading-7 text-white/60 sm:text-base sm:leading-7">
-              GoPurple brings strategy, creativity and performance together to
-              help ambitious brands move forward. We create digital experiences
-              that look better, work harder and are built with purpose.
+             The digital world is an ever-evolving landscape. What customers expect keeps changing. Platforms
+             keep updating. Competing brands keep sharpening their approach.
             </p>
 
             {/* CTA */}

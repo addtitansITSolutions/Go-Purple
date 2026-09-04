@@ -109,14 +109,13 @@ const Hero = () => {
             {/* Heading */}
             <h1 className="font-[var(--font-display)] text-[clamp(3.2rem,6vw,6.2rem)] font-semibold leading-[0.96] tracking-[-0.055em]">
 
-              We turn ideas
-              <br />
-
-              into{" "}
+              Marketing 
+              {/* <br /> */}
+              {" "}with{" "}
               <span className="relative inline-block text-[var(--primary)]">
 
-                digital
-                <span className="text-white"> growth.</span>
+                Measurable
+                <span className="text-white"> Impact.</span>
 
               </span>
 
@@ -124,9 +123,7 @@ const Hero = () => {
 
             {/* Description */}
             <p className="mt-7 max-w-[560px] font-[var(--font-body)] text-base leading-7 text-white/55 sm:text-lg">
-              We combine strategy, technology and creativity to
-              help ambitious brands grow, connect and stand out
-              in the digital world.
+              Getting noticed is only step one. What happens after that is what actually grows a business, and that is where we put our focus.
             </p>
 
             {/* CTA */}

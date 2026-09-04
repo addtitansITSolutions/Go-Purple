@@ -2,19 +2,24 @@ import { ArrowUpRight, Check } from "lucide-react";
 
 const principles = [
   {
-    title: "Strategy first",
+    title: "Assess",
     description:
-      "We start by understanding your brand, audience and goals before deciding what to create.",
+      "We take a close look at your current numbers and find exactly where your customer costs are running higher than they should.",
   },
   {
-    title: "Creative that connects",
+    title: "Plan",
     description:
-      "We turn strategy into ideas and experiences that feel relevant, memorable and distinctly yours.",
+      "We build a campaign plan shaped around your specific business, not a copy-paste playbook.",
   },
   {
-    title: "Built for growth",
+    title: "Run and Adjust",
     description:
-      "Everything we create has a purpose — to strengthen your brand and move your business forward.",
+      "We manage your affiliate, performance, and online store campaigns in real time, adjusting as new data comes in.",
+  },
+  {
+    title: "Update",
+    description:
+      "You receive weekly updates, including a clear breakdown of what your spend produced and what it cost to get there.",
   },
 ];
 
@@ -24,22 +29,18 @@ const GoPurpleDifference = () => {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
         {/* Section Intro */}
-        <div className="mb-14 lg:mb-20">
+        <div className="mb-10 lg:mb-5">
           <div className="mb-5 flex items-center gap-3">
             {/* <span className="h-px w-10 bg-[var(--primary)]" /> */}
 
             <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
-              Why GoPurple
+              How We Operate
             </span>
           </div>
 
           <h2 className="max-w-4xl font-[var(--font-display)] text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[var(--dark)] sm:text-5xl md:text-6xl">
-            We bring{" "}
-            <span className="text-[var(--primary)]">strategy</span>,{" "}
-            <span className="text-[var(--primary)]">creativity</span>{" "}
-            and{" "}
-            <span className="text-[var(--primary)]">performance</span>{" "}
-            together.
+            <span className="text-[var(--primary)]">Ownership </span>,{" "}
+            from the very First step.
           </h2>
         </div>
 
@@ -50,7 +51,7 @@ const GoPurpleDifference = () => {
           {/* Left Content */}
           <div>
 
-            <p className="max-w-xl font-[var(--font-body)] text-lg leading-8 text-[var(--text)] sm:text-xl">
+            {/* <p className="max-w-xl font-[var(--font-body)] text-lg leading-8 text-[var(--text)] sm:text-xl">
               Digital shouldn't just look impressive. It should have a
               reason to exist.
             </p>
@@ -59,11 +60,11 @@ const GoPurpleDifference = () => {
               At GoPurple, we combine business thinking with creative
               execution to help ambitious brands build stronger digital
               experiences and achieve meaningful growth.
-            </p>
+            </p> */}
 
 
             {/* Principles */}
-            <div className="mt-10 border-t border-[var(--border)]">
+            <div className="mt-0 border-t border-[var(--border)]">
 
               {principles.map((item, index) => (
                 <div
@@ -97,8 +98,7 @@ const GoPurpleDifference = () => {
                 href="/about"
                 className="group inline-flex items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em] text-[var(--dark)]"
               >
-                Discover GoPurple
-
+                See What We Offer
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--dark)] text-white transition-all duration-300 group-hover:rotate-45 group-hover:bg-[var(--primary)]">
                   <ArrowUpRight size={16} />
                 </span>
@@ -137,7 +137,7 @@ const GoPurpleDifference = () => {
 
 
         {/* Bottom Statement */}
-        <div className="mt-20 border-t border-[var(--border)] pt-8 lg:mt-28">
+        {/* <div className="mt-20 border-t border-[var(--border)] pt-8 lg:mt-28">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 
             <p className="max-w-3xl font-[var(--font-display)] text-2xl font-medium leading-[1.2] tracking-[-0.03em] text-[var(--dark)] sm:text-3xl lg:text-4xl">
@@ -152,7 +152,7 @@ const GoPurpleDifference = () => {
             </span>
 
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

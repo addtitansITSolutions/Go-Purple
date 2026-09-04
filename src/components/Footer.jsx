@@ -109,10 +109,9 @@ const Footer = () => {
             </a>
 
             <p className="mt-5 max-w-xs font-[var(--font-body)] text-sm leading-6 text-white/50">
-              GoPurple brings together digital marketing,
-              e-commerce and creative design to help brands
-              build stronger identities, reach the right
-              audiences and create meaningful growth.
+              Go Purple Nut is a growth-focused marketing company serving brands across the United States. We
+              bring affiliate, performance, digital, ecommerce, and mobile performance marketing together under
+              one umbrella with a single goal: to turn your marketing spend into visible and scalable results.
             </p>
           </div>
 
