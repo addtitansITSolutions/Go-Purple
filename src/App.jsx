@@ -8,6 +8,8 @@ import "./App.css"
 import DigitalMarketing from './pages/services/DigitalMarketing'
 import Project from './pages/Project'
 import ScrollToTop from "./components/ScrollToTop";
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import GDPRCompliance from './pages/GDPRCompliance'
 
 
 
@@ -21,6 +23,8 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/services/digital-marketing' element={<DigitalMarketing />} />
           <Route path="/projects" element={<Project />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/gdpr-compliance" element={<GDPRCompliance />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       <Toaster position="top-right" reverseOrder={false} />

@@ -231,10 +231,10 @@ const Footer = () => {
             </a>
 
             <a
-              href="/terms"
+              href="/gdpr-compliance"
               className="font-[var(--font-body)] text-xs text-white/40 transition-colors duration-300 hover:text-white"
             >
-              Terms & Conditions
+              GDPR Compliance
             </a>
 
           </div>
