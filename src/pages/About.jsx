@@ -4,6 +4,7 @@ import AboutHero from "../sections/about/AboutHero";
 import AboutStory from "../sections/about/AboutStory";
 import ClientsCarousel from "../sections/about/ClientsCarousel";
 import IndustriesWeServe from "../sections/about/IndustriesWeServe";
+import WhatMakesUsDifferent from "../sections/about/WhatMakesUsDifferent";
 // import WhatDrivesUs from "../sections/about/WhatDrivesUs";
 
 const About = () => {
@@ -14,6 +15,7 @@ const About = () => {
       <main>
         <AboutHero />
         <AboutStory />
+        <WhatMakesUsDifferent />
         <ClientsCarousel />
         {/* <WhatDrivesUs /> */}
         <IndustriesWeServe />

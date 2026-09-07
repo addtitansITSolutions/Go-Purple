@@ -53,18 +53,17 @@ const Contact = () => {
 
                 {/* Heading */}
                 <h1 className="font-[var(--font-display)] text-5xl font-semibold leading-[0.94] tracking-[-0.055em] sm:text-6xl lg:text-7xl xl:text-[88px]">
-                  Let’s make
+                  Let’s Build
                   <br />
                   something{" "}
                   <span className="text-[var(--primary)]">
-                    happen.
+                    Interesting.
                   </span>
                 </h1>
 
                 {/* Description */}
                 <p className="mt-8 max-w-[600px] font-[var(--font-body)] text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-                  Have a project in mind, a business you want to grow, or
-                  simply an idea you want to explore? Tell us about it.
+                  Have a question, a project in mind, or want to learn more about what we do? Reach out, and our team will get back to you.
                 </p>
 
                 {/* Scroll Indicator */}
@@ -105,9 +104,7 @@ const Contact = () => {
                   </p>
 
                   <p className="mt-6 max-w-[420px] text-sm leading-6 text-white/45">
-                    Whether you are launching something new or looking to
-                    improve what already exists, we would love to hear what
-                    you're working on.
+                    No project is too small, and no question is too basic. Reach out. Let&#39;s start the conversation.
                   </p>
 
                 </div>
@@ -327,9 +324,9 @@ const Contact = () => {
                 </span>
 
                 <h2 className="mt-4 max-w-[850px] font-[var(--font-display)] text-3xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
-                  Great things start with a{" "}
+                  We typically respond within{" "}
                   <span className="text-[var(--secondary)]">
-                    simple conversation.
+                    one to two business days.
                   </span>
                 </h2>
               </div>
