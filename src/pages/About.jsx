@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import AboutHero from "../sections/about/AboutHero";
 import AboutStory from "../sections/about/AboutStory";
 import ClientsCarousel from "../sections/about/ClientsCarousel";
+import IndustriesWeServe from "../sections/about/IndustriesWeServe";
 // import WhatDrivesUs from "../sections/about/WhatDrivesUs";
 
 const About = () => {
@@ -15,6 +16,7 @@ const About = () => {
         <AboutStory />
         <ClientsCarousel />
         {/* <WhatDrivesUs /> */}
+        <IndustriesWeServe />
         {/* More About sections will come here */}
       </main>
 

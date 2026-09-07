@@ -16,7 +16,7 @@ const Home = () => {
         <WhatWeDo />
         <GoPurpleDifference />
         <ServicesPreview />
-        <FeaturedWork />
+        {/* <FeaturedWork /> */}
         <Testimonials />
       </main>
       <Footer />
