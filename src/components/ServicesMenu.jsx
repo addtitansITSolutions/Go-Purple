@@ -37,14 +37,13 @@ export const serviceItems = [
     description:
       "Give your brand a visual identity people remember.",
   },
-  {
-    number: "06",
-    name: "Social Media Marketing",
-    path: "/services/social-media-marketing",
-    description:
-      "Create social content that starts conversations.",
-  },
-  
+  // {
+  //   number: "06",
+  //   name: "Social Media Marketing",
+  //   path: "/services/social-media-marketing",
+  //   description:
+  //     "Create social content that starts conversations.",
+  // },
 ];
 
 /* =====================================================
