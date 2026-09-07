@@ -18,10 +18,10 @@ export const serviceItems = [
   },
   {
     number: "03",
-    name: "SEO",
-    path: "/services/seo",
+    name: "Affiliate Marketing",
+    path: "/services/affiliate-marketing",
     description:
-      "Get discovered by the people actively looking for you.",
+      "Monetize your audience and drive sales through partnerships.",
   },
   {
     number: "04",
@@ -77,7 +77,7 @@ export const DesktopServicesMenu = ({
             </h3>
           </div>
 
-          <NavLink
+          {/* <NavLink
             to="/services"
             onClick={onClose}
             className="group hidden items-center gap-2 font-[var(--font-body)] text-[9px] font-bold uppercase tracking-[0.15em] text-[var(--text)] sm:flex"
@@ -88,7 +88,7 @@ export const DesktopServicesMenu = ({
               size={14}
               className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
-          </NavLink>
+          </NavLink> */}
         </div>
 
         {/* Services */}
@@ -124,7 +124,7 @@ export const DesktopServicesMenu = ({
         </div>
 
         {/* Bottom Strip */}
-        <div className="flex items-center justify-between bg-[var(--dark)] px-7 py-4">
+        {/* <div className="flex items-center justify-between bg-[var(--dark)] px-7 py-4">
           <span className="font-[var(--font-body)] text-[9px] uppercase tracking-[0.18em] text-white/40">
             Digital · E-commerce · Creative
           </span>
@@ -141,7 +141,7 @@ export const DesktopServicesMenu = ({
               className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
           </NavLink>
-        </div>
+        </div> */}
 
       </div>
     </div>

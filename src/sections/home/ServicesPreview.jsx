@@ -18,6 +18,7 @@ const services = [
       "Reward-based partnerships built to drive real growth. We build and manage affiliate networks with no wasted spend.",
     tags: ["Partnerships", "Affiliates", "ROI"],
     icon: Share2,
+    href: "/services/affiliate-marketing",
     image:
       "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
@@ -28,6 +29,7 @@ const services = [
       "Cross-channel campaigns built around a clear business goal and refined continually to protect your return.",
     tags: ["Paid Ads", "Optimization", "Conversion"],
     icon: TrendingUp,
+    href: "/services/performance-marketing",
     image:
       "https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
@@ -38,6 +40,7 @@ const services = [
       "Search, paid advertising, content, and analytics working together to attract the right audience and turn them into customers.",
     tags: ["SEO", "Content", "Analytics"],
     icon: BarChart3,
+    href: "/services/digital-marketing",
     image:
       "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
@@ -48,6 +51,7 @@ const services = [
       "Full support for online brands, from the moment someone discovers your store to the day they become a repeat customer.",
     tags: ["Storefronts", "Retention", "Growth"],
     icon: ShoppingBag,
+    href: "/services/e-commerce",
     image:
       "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
@@ -58,6 +62,7 @@ const services = [
       "Mobile campaigns built around installs, signups, and in-app actions you can track and improve.",
     tags: ["App Growth", "Installs", "In-App Actions"],
     icon: Smartphone,
+    href: "/services/performance-marketing",
     image:
       "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
@@ -204,7 +209,7 @@ const ServicesPreview = () => {
                               </div>
 
                               <Link
-                                to="/services"
+                                to={service.href || "/services"}
                                 className="group/link flex w-fit items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em] text-white"
                               >
                                 Explore service

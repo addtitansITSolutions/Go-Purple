@@ -95,7 +95,7 @@ const GoPurpleDifference = () => {
             {/* CTA */}
             <div className="mt-9">
               <a
-                href="/about"
+                href="/services/digital-marketing"
                 className="group inline-flex items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em] text-[var(--dark)]"
               >
                 See What We Offer

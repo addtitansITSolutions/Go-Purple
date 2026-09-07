@@ -130,7 +130,7 @@ const Hero = () => {
             <div className="mt-9 flex flex-wrap items-center gap-4">
 
               <Link
-                to="/services"
+                to="/services/digital-marketing"
                 style={{ color: "#111827" }}
                 className="group inline-flex items-center gap-3 bg-white px-6 py-3.5 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-[var(--primary)] hover:text-white"
               >

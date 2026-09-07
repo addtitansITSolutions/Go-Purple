@@ -1,31 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const DigitalMarketingHero = () => {
+const AffiliateMarketingHero = () => {
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="mx-auto max-w-[1440px] px-6 pt-18 sm:px-10 sm:pt-32 lg:px-16 lg:pt-16">
-
-        {/* Top bar */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center justify-between border-b border-[var(--border)] pb-5"
-        >
-          <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-[var(--primary)]" />
-
-            <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--dark)]">
-              Digital Marketing
-            </span>
-          </div>
-
-          <span className="hidden font-[var(--font-body)] text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400 sm:block">
-            GoPurple / Services / 01
-          </span>
-        </motion.div> */}
 
         {/* Main heading */}
         <div className="relative pt-12 sm:pt-16 lg:pt-20">
@@ -38,12 +18,9 @@ const DigitalMarketingHero = () => {
             }}
             className="relative z-10 max-w-[1100px] font-[var(--font-display)] text-[17vw] font-semibold leading-[0.82] tracking-[-0.075em] text-[var(--dark)] sm:text-[13vw] lg:text-[110px]"
           >
-            DIGITAL
+            AFFILIATE
             <br />
-            <span className="relative">
-              MARKETING
-              {/* <span className="absolute -bottom-2 left-0 h-[4px] w-16 bg-[var(--primary)] sm:-bottom-3 sm:h-[5px] sm:w-24 lg:w-32" /> */}
-            </span>
+            <span className="relative">MARKETING</span>
           </motion.h1>
 
           {/* Image */}
@@ -74,8 +51,8 @@ const DigitalMarketingHero = () => {
           >
             <div className="relative overflow-hidden rounded-3xl">
               <motion.img
-                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1800"
-                alt="Digital marketing team working together"
+                src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1800"
+                alt="Affiliate marketing team collaborating"
                 className="aspect-[16/9] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
               />
 
@@ -86,11 +63,11 @@ const DigitalMarketingHero = () => {
               <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-5 sm:p-7">
                 <div>
                   <p className="font-[var(--font-body)] text-[9px] font-bold uppercase tracking-[0.18em] text-white/70">
-                    Strategy / Creative / Performance
+                    Partnerships / Performance / Growth
                   </p>
 
                   <p className="mt-1 font-[var(--font-display)] text-lg font-semibold text-white sm:text-xl">
-                    Built to create momentum.
+                    Partnerships that perform.
                   </p>
                 </div>
 
@@ -127,9 +104,10 @@ const DigitalMarketingHero = () => {
             className="relative z-30 mt-10 max-w-[520px] sm:mt-12 lg:-mt-45 lg:ml-8"
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              Digital marketing should do more than generate attention.
-              We build strategies that connect your brand with the right
-              people and turn that attention into meaningful growth.
+              Affiliate marketing should be more than another acquisition
+              channel. We connect your brand with the right publishers,
+              creators and communities to turn trusted recommendations into
+              measurable revenue.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -137,28 +115,16 @@ const DigitalMarketingHero = () => {
                 to="/contact"
                 style={{ color: "var(--white)" }}
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-[var(--dark)] px-6 py-3.5 font-[var(--font-body)] text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--primary)] sm:w-auto"
-                >
+              >
                 Let's talk
 
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/10">
-                    <ArrowUpRight
+                  <ArrowUpRight
                     size={14}
                     className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    />
+                  />
                 </span>
-               </Link>
-
-              {/* <a
-                href="#what-we-do"
-                className="group inline-flex items-center gap-2 px-2 py-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.14em] text-[var(--dark)]"
-              >
-                Explore
-
-                <ArrowDown
-                  size={14}
-                  className="transition-transform duration-300 group-hover:translate-y-1"
-                />
-              </a> */}
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -168,35 +134,38 @@ const DigitalMarketingHero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="mt-6 grid border-t border-[var(--border)] bg-[var(--secondary)] px-6 py-6 sm:mt-20 sm:grid-cols-3 rounded-2xl sm:border sm:px-10 sm:py-8 lg:px-10"
+          className="mt-6 mb-10 grid rounded-2xl border border-[var(--border)] bg-[var(--secondary)] px-6 py-6 sm:mt-20 sm:grid-cols-3 sm:px-10 sm:py-8 lg:px-10"
         >
+          {/* Item 1 */}
           <div className="border-b border-[var(--border)] pb-5 sm:border-b-0 sm:border-r sm:pb-0">
             <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.16em] text-gray-400">
               What we do
             </span>
 
             <p className="mt-2 font-[var(--font-display)] text-sm font-semibold text-[var(--dark)]">
-              Build digital momentum
+              Build valuable partnerships
             </p>
           </div>
 
-          <div className="border-b border-[var(--border)] py-5 sm:border-b-0 sm:px-8 sm:py-0 sm:border-r">
+          {/* Item 2 */}
+          <div className="border-b border-[var(--border)] py-5 sm:border-b-0 sm:border-r sm:px-8 sm:py-0">
             <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.16em] text-gray-400">
               Approach
             </span>
 
             <p className="mt-2 font-[var(--font-display)] text-sm font-semibold text-[var(--dark)]">
-              Strategy × Creativity × Performance
+              Partnerships × Performance × Trust
             </p>
           </div>
 
+          {/* Item 3 */}
           <div className="pt-5 sm:pl-8 sm:pt-0">
             <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.16em] text-gray-400">
               Result
             </span>
 
             <p className="mt-2 font-[var(--font-display)] text-sm font-semibold text-[var(--dark)]">
-              Growth that keeps moving
+              Revenue that keeps growing
             </p>
           </div>
         </motion.div>
@@ -205,4 +174,4 @@ const DigitalMarketingHero = () => {
   );
 };
 
-export default DigitalMarketingHero;
+export default AffiliateMarketingHero;

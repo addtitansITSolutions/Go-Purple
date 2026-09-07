@@ -10,6 +10,8 @@ import Project from './pages/Project'
 import ScrollToTop from "./components/ScrollToTop";
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import GDPRCompliance from './pages/GDPRCompliance'
+import AffiliateMarketing from './pages/services/AffiliateMarketing'
+import Ecommerce from './pages/services/Ecommerce'
 
 
 
@@ -22,6 +24,8 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/services/digital-marketing' element={<DigitalMarketing />} />
+          <Route path='/services/affiliate-marketing' element={<AffiliateMarketing />} />
+          <Route path='/services/e-commerce' element={<Ecommerce />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/gdpr-compliance" element={<GDPRCompliance />} />

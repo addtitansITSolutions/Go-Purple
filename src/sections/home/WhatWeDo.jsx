@@ -51,7 +51,7 @@ const WhatWeDo = () => {
               DIGITAL MARKETING
           ------------------------------------------------- */}
           <Link
-            to="/services"
+            to="/services/affiliate-marketing"
             className="group relative min-h-[420px] overflow-hidden rounded-[2rem] bg-[var(--dark)] p-7 text-white transition-all duration-500 hover:-translate-y-2 sm:p-9 lg:col-span-7"
           >
             {/* Decorative Circle */}
@@ -91,7 +91,7 @@ const WhatWeDo = () => {
               E-COMMERCE
           ------------------------------------------------- */}
           <Link
-            to="/services"
+            to="/services/e-commerce"
             className="group relative min-h-[420px] overflow-hidden rounded-[2rem] bg-[var(--primary)] p-7 text-white transition-all duration-500 hover:-translate-y-2 sm:p-9 lg:col-span-5"
           >
             {/* Giant decorative text */}
@@ -128,7 +128,7 @@ const WhatWeDo = () => {
               CREATIVE & DESIGN
           ------------------------------------------------- */}
           <Link
-            to="/services"
+            to="/services/creative-design"
             className="group relative min-h-[360px] overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white p-7 transition-all duration-500 hover:-translate-y-2 sm:p-9 lg:col-span-5"
           >
             {/* Floating visual */}
@@ -219,7 +219,7 @@ const WhatWeDo = () => {
           </p>
 
           <Link
-            to="/services"
+            to="/projects"
             className="group inline-flex w-fit items-center gap-3 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.15em] text-[var(--dark)]"
           >
             Explore everything we do

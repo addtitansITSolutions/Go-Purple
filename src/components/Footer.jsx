@@ -10,12 +10,12 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
-    { label: "Digital Marketing", href: "/services" },
-    { label: "Performance Marketing", href: "/services" },
-    { label: "SEO", href: "/services" },
-    { label: "E-commerce", href: "/services" },
-    { label: "Creative & Design", href: "/services" },
-    { label: "Social Media Marketing", href: "/services" },
+    { label: "Digital Marketing", href: "/services/digital-marketing" },
+    { label: "Performance Marketing", href: "/services/performance-marketing" },
+    { label: "Affiliate Marketing", href: "/services/affiliate-marketing" },
+    { label: "E-commerce", href: "/services/e-commerce" },
+    { label: "Creative & Design", href: "/services/creative-design" },
+    { label: "Social Media Marketing", href: "/services/social-media-marketing" },
   ];
 
   return (
@@ -191,7 +191,7 @@ const Footer = () => {
                 />
 
                 <span className="font-[var(--font-body)] text-sm text-white/70 transition-colors duration-300 group-hover:text-white">
-                  info@gopurplenet.com
+                  info@gopurplenut.com
                 </span>
               </a>
 
