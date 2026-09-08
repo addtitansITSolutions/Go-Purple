@@ -160,6 +160,8 @@ const CreativeDesignHero = () => {
   );
 };
 
+export default CreativeDesignHero;
+
 
 
 
