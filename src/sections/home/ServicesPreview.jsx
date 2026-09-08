@@ -20,7 +20,7 @@ const services = [
     icon: Share2,
     href: "/services/affiliate-marketing",
     image:
-      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "/home/affiliate.jpg",
   },
   {
     number: "02",
@@ -31,7 +31,7 @@ const services = [
     icon: TrendingUp,
     href: "/services/performance-marketing",
     image:
-      "https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "/home/performance.jpg",
   },
   {
     number: "03",
@@ -42,7 +42,7 @@ const services = [
     icon: BarChart3,
     href: "/services/digital-marketing",
     image:
-      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "/home/digitalmarketing.jpg",
   },
   {
     number: "04",
@@ -53,7 +53,7 @@ const services = [
     icon: ShoppingBag,
     href: "/services/e-commerce",
     image:
-      "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "/home/ecommerce.jpeg",
   },
   {
     number: "05",
@@ -64,7 +64,7 @@ const services = [
     icon: Smartphone,
     href: "/services/performance-marketing",
     image:
-      "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "/home/mobileperformance.jpg",
   },
 ];
 
