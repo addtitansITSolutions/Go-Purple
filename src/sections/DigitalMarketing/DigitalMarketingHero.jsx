@@ -70,11 +70,22 @@ const DigitalMarketingHero = () => {
                 ease: "easeOut",
               },
             }}
-            className="group relative z-20 mt-8 ml-auto w-full max-w-[740px] cursor-pointer sm:-mt-4 lg:-mt-10"
+            className="
+              group
+              relative
+              z-20
+              mt-8
+              ml-auto
+              w-full
+              max-w-[740px]
+              cursor-pointer
+              sm:mt-10
+              xl:-mt-10
+            "
           >
             <div className="relative overflow-hidden rounded-3xl">
               <motion.img
-                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1800"
+                src="/services/digital.jpg"
                 alt="Digital marketing team working together"
                 className="aspect-[16/9] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
               />
@@ -124,7 +135,19 @@ const DigitalMarketingHero = () => {
               delay: 0.65,
               duration: 0.7,
             }}
-            className="relative z-30 mt-10 max-w-[520px] sm:mt-12 lg:-mt-45 lg:ml-8"
+            className="
+              relative
+              z-30
+              mt-8
+              w-full
+              max-w-[560px]
+              sm:mt-10
+              md:max-w-[620px]
+              lg:max-w-[620px]
+              xl:-mt-45
+              xl:ml-8
+              xl:max-w-[520px]
+            "
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
               Digital marketing should do more than generate attention.

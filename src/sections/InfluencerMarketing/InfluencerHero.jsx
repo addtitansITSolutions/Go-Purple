@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const AffiliateMarketingHero = () => {
+const InfluencerHero = () => {
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="mx-auto max-w-[1440px] px-6 pt-18 sm:px-10 sm:pt-32 lg:px-16 lg:pt-16">
@@ -32,7 +32,7 @@ const AffiliateMarketingHero = () => {
               xl:text-[110px]
             "
           >
-            AFFILIATE
+            INFLUENCER
             <br />
 
             <span className="relative">
@@ -79,8 +79,8 @@ const AffiliateMarketingHero = () => {
           >
             <div className="relative overflow-hidden rounded-3xl">
               <motion.img
-                src="/services/affiliate.jpg"
-                alt="Affiliate marketing team collaborating"
+                src="/services/influencermarketing.jpg"
+                alt="Influencer creating digital content"
                 className="
                   aspect-[16/9]
                   w-full
@@ -99,11 +99,11 @@ const AffiliateMarketingHero = () => {
               <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-4 p-5 sm:p-7">
                 <div>
                   <p className="font-[var(--font-body)] text-[9px] font-bold uppercase tracking-[0.18em] text-white/70 sm:text-[10px]">
-                    Partnerships / Performance / Growth
+                    Creators / Community / Performance
                   </p>
 
                   <p className="mt-1 max-w-[420px] font-[var(--font-display)] text-lg font-semibold leading-tight text-white sm:text-xl">
-                    Partnerships that perform.
+                    Influence that feels authentic.
                   </p>
                 </div>
 
@@ -171,11 +171,17 @@ const AffiliateMarketingHero = () => {
             "
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              Affiliate marketing should be more than another acquisition
-              channel. We connect your brand with the right publishers,
-              creators and communities to turn trusted recommendations into
-              measurable revenue.
+              Influencer marketing is about more than reaching someone else's
+              audience. We connect brands with creators who have the right
+              voice, community and influence to make your message feel natural
+              and meaningful.
             </p>
+
+            {/* <p className="mt-4 font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
+              From creator discovery to campaign strategy and performance
+              measurement, we build partnerships designed to create attention,
+              trust and measurable growth.
+            </p> */}
 
             {/* CTA */}
             <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -203,7 +209,7 @@ const AffiliateMarketingHero = () => {
                   sm:w-auto
                 "
               >
-                Let's talk
+                Let's collaborate
 
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/10">
                   <ArrowUpRight
@@ -225,28 +231,65 @@ const AffiliateMarketingHero = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="mt-6 mb-10 grid rounded-2xl border border-[var(--border)] bg-[var(--secondary)] px-6 py-6 sm:mt-20 sm:grid-cols-3 sm:px-10 sm:py-8 lg:px-10"
+          transition={{
+            delay: 1,
+            duration: 0.8,
+          }}
+          className="
+            mt-8
+            mb-10
+            grid
+            rounded-2xl
+            border
+            border-[var(--border)]
+            bg-[var(--secondary)]
+            px-6
+            py-6
+            sm:mt-20
+            sm:grid-cols-3
+            sm:px-10
+            sm:py-8
+            lg:px-10
+          "
         >
           {/* Item 1 */}
-          <div className="border-b border-[var(--border)] pb-5 sm:border-b-0 sm:border-r sm:pb-0">
+          <div
+            className="
+              border-b
+              border-[var(--border)]
+              pb-5
+              sm:border-b-0
+              sm:border-r
+              sm:pb-0
+            "
+          >
             <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.16em] text-gray-400">
               What we do
             </span>
 
             <p className="mt-2 font-[var(--font-display)] text-sm font-semibold text-[var(--dark)]">
-              Build valuable partnerships
+              Build creator-led growth
             </p>
           </div>
 
           {/* Item 2 */}
-          <div className="border-b border-[var(--border)] py-5 sm:border-b-0 sm:border-r sm:px-8 sm:py-0">
+          <div
+            className="
+              border-b
+              border-[var(--border)]
+              py-5
+              sm:border-b-0
+              sm:border-r
+              sm:px-8
+              sm:py-0
+            "
+          >
             <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.16em] text-gray-400">
               Approach
             </span>
 
             <p className="mt-2 font-[var(--font-display)] text-sm font-semibold text-[var(--dark)]">
-              Partnerships × Performance × Trust
+              Creators × Community × Performance
             </p>
           </div>
 
@@ -257,7 +300,7 @@ const AffiliateMarketingHero = () => {
             </span>
 
             <p className="mt-2 font-[var(--font-display)] text-sm font-semibold text-[var(--dark)]">
-              Revenue that keeps growing
+              Influence that drives action
             </p>
           </div>
         </motion.div>
@@ -266,4 +309,4 @@ const AffiliateMarketingHero = () => {
   );
 };
 
-export default AffiliateMarketingHero;
+export default InfluencerHero;

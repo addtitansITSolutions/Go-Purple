@@ -50,31 +50,29 @@ const AboutStory = () => {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]">
-              <motion.img
-                src="https://images.pexels.com/photos/6444904/pexels-photo-6444904.jpeg?cs=srgb&dl=pexels-rombo-1510555-6444904.jpg&fm=jpg"
-                alt="Creative team collaborating on a project"
-                className="h-full w-full object-cover"
-                initial={{ scale: 1.08 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.1, ease: "easeOut" }}
-              />
+          <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[3/4] rounded-3xl">
+            <motion.img
+              src="/Aboutus/OurStory.jpg"
+              alt="Creative team collaborating on a project"
+              className="h-full w-full object-contain object-center"
+              initial={{ scale: 1.08 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.1, ease: "easeOut" }}
+            />
 
-              {/* Image Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
-              {/* Image Label */}
-              <div className="absolute bottom-5 left-5 sm:bottom-7 sm:left-7">
-                <p className="font-[var(--font-body)] text-[9px] font-bold uppercase tracking-[0.2em] text-white/70">
-                  The GoPurple Mindset
-                </p>
+            <div className="absolute bottom-5 left-5 sm:bottom-7 sm:left-7">
+              <p className="font-[var(--font-body)] text-[9px] font-bold uppercase tracking-[0.2em] text-white/70">
+                The GoPurple Mindset
+              </p>
 
-                <p className="mt-1 font-[var(--font-display)] text-lg font-medium text-white sm:text-xl">
-                  Think differently. Build boldly.
-                </p>
-              </div>
+              <p className="mt-1 font-[var(--font-display)] text-lg font-medium text-white sm:text-xl">
+                Think differently. Build boldly.
+              </p>
             </div>
+          </div>
 
             {/* Accent Block */}
             {/* <motion.div

@@ -5,14 +5,25 @@ import {
   ShoppingBag,
   Share2,
   TrendingUp,
-  Smartphone,
+  Users,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
 const services = [
-  {
+   {
     number: "01",
+    title: "Ecommerce Marketing",
+    description:
+      "Full support for online brands, from the moment someone discovers your store to the day they become a repeat customer.",
+    tags: ["Storefronts", "Retention", "Growth"],
+    icon: ShoppingBag,
+    href: "/services/e-commerce",
+    image:
+      "/home/ecommerce.jpg",
+  },
+  {
+    number: "02",
     title: "Affiliate Marketing",
     description:
       "Reward-based partnerships built to drive real growth. We build and manage affiliate networks with no wasted spend.",
@@ -23,7 +34,7 @@ const services = [
       "/home/affiliate.jpg",
   },
   {
-    number: "02",
+    number: "03",
     title: "Performance Marketing",
     description:
       "Cross-channel campaigns built around a clear business goal and refined continually to protect your return.",
@@ -31,10 +42,10 @@ const services = [
     icon: TrendingUp,
     href: "/services/performance-marketing",
     image:
-      "/home/performance.jpg",
+      "/home/performance2.jpg",
   },
   {
-    number: "03",
+    number: "04",
     title: "Digital Marketing",
     description:
       "Search, paid advertising, content, and analytics working together to attract the right audience and turn them into customers.",
@@ -45,26 +56,15 @@ const services = [
       "/home/digitalmarketing.jpg",
   },
   {
-    number: "04",
-    title: "Ecommerce Marketing",
-    description:
-      "Full support for online brands, from the moment someone discovers your store to the day they become a repeat customer.",
-    tags: ["Storefronts", "Retention", "Growth"],
-    icon: ShoppingBag,
-    href: "/services/e-commerce",
-    image:
-      "/home/ecommerce.jpeg",
-  },
-  {
     number: "05",
-    title: "Mobile Performance Marketing",
+    title: "Influencer Marketing",
     description:
-      "Mobile campaigns built around installs, signups, and in-app actions you can track and improve.",
-    tags: ["App Growth", "Installs", "In-App Actions"],
-    icon: Smartphone,
-    href: "/services/performance-marketing",
+      "Creator campaigns built around authentic partnerships, meaningful engagement, and measurable brand growth.",
+    tags: ["Creator Partnerships", "Campaigns", "Engagement"],
+    icon: Users,
+    href: "/services/influencer-marketing",
     image:
-      "/home/mobileperformance.jpg",
+      "/home/influencer.jpg",
   },
 ];
 
@@ -187,7 +187,6 @@ const ServicesPreview = () => {
                               </div>
 
                               <div>
-
                                 <h3 className="max-w-2xl font-[var(--font-display)] text-5xl font-semibold leading-[0.95] tracking-[-0.05em] xl:text-6xl">
                                   {service.title}
                                 </h3>
@@ -231,7 +230,6 @@ const ServicesPreview = () => {
                                 alt={service.title}
                                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                               />
-
                               <div className="absolute inset-0 bg-gradient-to-r from-[#171323] via-transparent to-transparent opacity-90" />
 
                               <div className="absolute bottom-8 right-8">

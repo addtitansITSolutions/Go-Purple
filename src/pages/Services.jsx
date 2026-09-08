@@ -17,14 +17,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const services = [
-  {
+    {
     number: "01",
-    title: "Affiliate Marketing",
+    title: "E-commerce Marketing",
     description:
-      "Build valuable partnerships with publishers, creators and communities that turn trusted recommendations into measurable revenue.",
-    icon: Users,
-    href: "/services/affiliate-marketing",
-    category: "Partnerships",
+      "Build better shopping journeys that help customers discover, trust, buy and come back for more.",
+    icon: ShoppingBag,
+    href: "/services/e-commerce",
+    category: "Commerce",
   },
   {
     number: "02",
@@ -46,33 +46,15 @@ const services = [
   },
   {
     number: "04",
-    title: "E-commerce Marketing",
+    title: "Affiliate Marketing",
     description:
-      "Build better shopping journeys that help customers discover, trust, buy and come back for more.",
-    icon: ShoppingBag,
-    href: "/services/e-commerce",
-    category: "Commerce",
+      "Build valuable partnerships with publishers, creators and communities that turn trusted recommendations into measurable revenue.",
+    icon: Users,
+    href: "/services/affiliate-marketing",
+    category: "Partnerships",
   },
-//   {
-//     number: "05",
-//     title: "Mobile Performance Marketing",
-//     description:
-//       "Grow mobile products through acquisition strategies designed around installs, engagement, retention and sustainable growth.",
-//     icon: Smartphone,
-//     href: "/services/mobile-marketing",
-//     category: "Mobile",
-//   },
-//   {
-//     number: "06",
-//     title: "SEO",
-//     description:
-//       "Build sustainable organic visibility by connecting search strategy, useful content and technical foundations.",
-//     icon: Search,
-//     href: "/services/seo",
-//     category: "Organic",
-//   },
   {
-    number: "07",
+    number: "05",
     title: "Creative & Design",
     description:
       "Create brands, campaigns and digital experiences that communicate clearly, feel distinctive and stay memorable.",
@@ -80,15 +62,15 @@ const services = [
     href: "/services/creative-design",
     category: "Creative",
   },
-//   {
-//     number: "08",
-//     title: "Social Media Marketing",
-//     description:
-//       "Build social presence through thoughtful strategy, relevant content and creative that gives people a reason to engage.",
-//     icon: Globe2,
-//     href: "/services/social-media-marketing",
-//     category: "Social",
-//   },
+  {
+    number: "06",
+    title: "Influencer Marketing",
+    description:
+      "Build social presence through thoughtful strategy, relevant content and creative that gives people a reason to engage.",
+    icon: Globe2,
+    href: "/services/influencer-marketing",
+    category: "Influencer",
+  },
 ];
 
 const Services = () => {

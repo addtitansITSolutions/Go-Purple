@@ -10,12 +10,12 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
+    { label: "E-commerce", href: "/services/e-commerce" },
     { label: "Digital Marketing", href: "/services/digital-marketing" },
     { label: "Performance Marketing", href: "/services/performance-marketing" },
     { label: "Affiliate Marketing", href: "/services/affiliate-marketing" },
-    { label: "E-commerce", href: "/services/e-commerce" },
     { label: "Creative & Design", href: "/services/creative-design" },
-    { label: "Social Media Marketing", href: "/services/social-media-marketing" },
+    { label: "Influencer Marketing", href: "/services/influencer-marketing" },
   ];
 
   return (

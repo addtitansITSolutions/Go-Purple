@@ -15,6 +15,7 @@ import Ecommerce from './pages/services/Ecommerce'
 import PerformanceMarketing from './pages/PerformanceMarketing'
 import CreativeAndDesign from './pages/CreativeAndDesign'
 import Services from './pages/Services'
+import InfluencerMarketing from './pages/InfluencerMarketing'
 
 
 
@@ -32,6 +33,7 @@ const App = () => {
           <Route path='/services/e-commerce' element={<Ecommerce />} />
           <Route path='/services/performance-marketing' element={<PerformanceMarketing />} />
           <Route path='/services/creative-design' element={<CreativeAndDesign />} />
+          <Route path='/services/influencer-marketing' element={<InfluencerMarketing />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/gdpr-compliance" element={<GDPRCompliance />} />

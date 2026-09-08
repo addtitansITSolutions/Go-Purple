@@ -16,11 +16,28 @@ const EcommerceMarketingHero = () => {
               duration: 0.9,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative z-10 max-w-[1100px] font-[var(--font-display)] text-[17vw] font-semibold leading-[0.82] tracking-[-0.075em] text-[var(--dark)] sm:text-[13vw] lg:text-[110px]"
+            className="
+              relative
+              z-10
+              max-w-[1200px]
+              font-[var(--font-display)]
+              text-[16vw]
+              font-semibold
+              leading-[0.82]
+              tracking-[-0.075em]
+              text-[var(--dark)]
+              sm:text-[12vw]
+              md:text-[10vw]
+              lg:text-[9vw]
+              xl:text-[110px]
+            "
           >
             E-COMMERCE
             <br />
-            <span className="relative">MARKETING</span>
+
+            <span className="relative">
+              MARKETING
+            </span>
           </motion.h1>
 
           {/* Image */}
@@ -47,33 +64,62 @@ const EcommerceMarketingHero = () => {
                 ease: "easeOut",
               },
             }}
-            className="group relative z-20 mt-8 ml-auto w-full max-w-[740px] cursor-pointer sm:-mt-4 lg:-mt-10"
+            className="
+              group
+              relative
+              z-20
+              mt-8
+              ml-auto
+              w-full
+              max-w-[740px]
+              cursor-pointer
+              sm:mt-10
+              xl:-mt-10
+            "
           >
             <div className="relative overflow-hidden rounded-3xl">
               <motion.img
-                src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1800"
+                src="/services/ecommerce.jpg"
                 alt="E-commerce shopping experience"
-                className="aspect-[16/9] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                className="
+                  aspect-[16/9]
+                  w-full
+                  object-cover
+                  transition-transform
+                  duration-700
+                  ease-out
+                  group-hover:scale-[1.06]
+                "
               />
 
               {/* Image overlay */}
               <div className="absolute inset-0 bg-black/70 transition-colors duration-500 group-hover:bg-black/10" />
 
               {/* Image label */}
-              <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-5 sm:p-7">
+              <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-4 p-5 sm:p-7">
                 <div>
-                  <p className="font-[var(--font-body)] text-[9px] font-bold uppercase tracking-[0.18em] text-white/70">
+                  <p className="font-[var(--font-body)] text-[9px] font-bold uppercase tracking-[0.18em] text-white/70 sm:text-[10px]">
                     Strategy / Commerce / Conversion
                   </p>
 
-                  <p className="mt-1 font-[var(--font-display)] text-lg font-semibold text-white sm:text-xl">
+                  <p className="mt-1 max-w-[420px] font-[var(--font-display)] text-lg font-semibold leading-tight text-white sm:text-xl">
                     Built to turn browsing into buying.
                   </p>
                 </div>
 
                 <motion.div
                   whileHover={{ rotate: 45 }}
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[var(--dark)]"
+                  className="
+                    flex
+                    h-11
+                    w-11
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-full
+                    bg-white
+                    text-[var(--dark)]
+                  "
                 >
                   <ArrowUpRight size={18} />
                 </motion.div>
@@ -89,7 +135,16 @@ const EcommerceMarketingHero = () => {
                 duration: 0.7,
                 ease: "easeOut",
               }}
-              className="absolute -right-3 bottom-0 w-[3px] bg-[var(--primary)] sm:-right-4"
+              className="
+                absolute
+                -right-3
+                bottom-0
+                hidden
+                w-[3px]
+                bg-[var(--primary)]
+                sm:block
+                sm:-right-4
+              "
             />
           </motion.div>
 
@@ -101,7 +156,19 @@ const EcommerceMarketingHero = () => {
               delay: 0.65,
               duration: 0.7,
             }}
-            className="relative z-30 mt-10 max-w-[520px] sm:mt-12 lg:-mt-45 lg:ml-8"
+            className="
+              relative
+              z-30
+              mt-8
+              w-full
+              max-w-[560px]
+              sm:mt-10
+              md:max-w-[620px]
+              lg:max-w-[620px]
+              xl:-mt-45
+              xl:ml-8
+              xl:max-w-[520px]
+            "
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
               E-commerce growth is about more than getting people to your
@@ -109,18 +176,43 @@ const EcommerceMarketingHero = () => {
               to discover, trust, buy and come back for more.
             </p>
 
+            {/* CTA */}
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <Link
                 to="/contact"
                 style={{ color: "var(--white)" }}
-                className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-[var(--dark)] px-6 py-3.5 font-[var(--font-body)] text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--primary)] sm:w-auto"
+                className="
+                  group
+                  inline-flex
+                  w-full
+                  items-center
+                  justify-center
+                  gap-3
+                  rounded-full
+                  bg-[var(--dark)]
+                  px-6
+                  py-3.5
+                  font-[var(--font-body)]
+                  text-sm
+                  font-semibold
+                  text-white
+                  transition-all
+                  duration-300
+                  hover:bg-[var(--primary)]
+                  sm:w-auto
+                "
               >
                 Let's talk
 
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/10">
                   <ArrowUpRight
                     size={14}
-                    className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5
+                    "
                   />
                 </span>
               </Link>
