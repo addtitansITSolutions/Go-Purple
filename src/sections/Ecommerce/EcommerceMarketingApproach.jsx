@@ -13,31 +13,31 @@ const stages = [
     title: "Discover",
     label: "Get attention",
     description:
-      "We help the right customers discover your products through search, social, content and performance-led campaigns.",
+      "We help the right shoppers find your products through search, social, content, and performance-driven campaigns.",
     icon: Search,
   },
   {
     number: "02",
     title: "Consider",
-    label: "Build confidence",
+    label: "Build Trust",
     description:
-      "We strengthen product storytelling, creative and landing experiences so shoppers have more reasons to choose you.",
+      "We strengthen your product story, creative, and landing experience so shoppers have more reasons to choose you.",
     icon: MousePointerClick,
   },
   {
     number: "03",
     title: "Convert",
-    label: "Make buying easier",
+    label: "Remove Friction",
     description:
-      "We remove friction from the shopping journey and optimize the moments that influence purchase decisions.",
+      "We simplify the shopping journey and improve the moments that actually influence a purchase decision.",
     icon: ShoppingBag,
   },
   {
     number: "04",
     title: "Retain",
-    label: "Increase customer value",
+    label: "Grow Value",
     description:
-      "We create opportunities to bring customers back through remarketing, retention and ongoing engagement.",
+      "We create ways to bring customers back through remarketing, retention efforts, and ongoing engagement.",
     icon: Repeat2,
   },
 ];
@@ -69,14 +69,13 @@ const EcommerceMarketingApproach = () => {
             <h2 className="mt-5 max-w-5xl font-[var(--font-display)] text-4xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-5xl lg:text-7xl">
               We build the journey{" "}
               <span className="text-[var(--secondary)]">
-                around the customer.
+                around your customer.
               </span>
             </h2>
           </div>
 
           <p className="max-w-md font-[var(--font-body)] text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-            Every interaction matters. Our approach connects acquisition,
-            experience and retention into one continuous path toward growth.
+            Every interaction counts. Our approach connects discovery, experience, and retention into one continuous path toward growth.
           </p>
         </motion.div>
 

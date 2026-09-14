@@ -4,21 +4,21 @@ import { ArrowUpRight } from "lucide-react";
 const principles = [
   {
     number: "01",
-    title: "Find the right audience",
+    title: "Find Where Your Audience Is",
     description:
-      "We identify where your audience spends their attention and build a strategy around reaching them there.",
+      "We figure out where your audience actually spends their attention and build a plan around reaching them there.",
   },
   {
     number: "02",
-    title: "Create meaningful attention",
+    title: "Create Something Worth Noticing",
     description:
-      "From messaging to creative, we create campaigns that give people a reason to stop, notice and engage.",
+      "From messaging to creative, we build campaigns that give people an actual reason to stop and pay attention.",
   },
   {
     number: "03",
-    title: "Turn attention into growth",
+    title: "Turn Attention into Results",
     description:
-      "Every activity is connected to a bigger goal — generating quality traffic, leads, customers and long-term growth.",
+      "Every piece of the campaign ties back to a bigger goal: more qualified traffic, more leads, and sustainable growth.",
   },
 ];
 
@@ -54,7 +54,7 @@ const DigitalMarketingIntro = () => {
             <h2 className="max-w-4xl font-[var(--font-display)] text-4xl font-semibold leading-[1.02] tracking-[-0.055em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
               Digital marketing,{" "}
               <span className="text-[var(--primary)]">
-                with a reason.
+                built with purpose
               </span>
             </h2>
           </motion.div>
@@ -72,10 +72,9 @@ const DigitalMarketingIntro = () => {
             className="lg:pt-8"
           >
             <p className="max-w-lg font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              We don't believe in marketing for the sake of being visible.
-              Every campaign, channel and creative decision should have a
-              clear purpose — helping your brand reach the right people and
-              move them closer to action.
+              We believe marketing should do more than keep you visible; it
+              should create real value. Every campaign, channel, and creative choice should have a clear reason
+              behind it, one that puts your brand in front of the right people and moves them closer to a decision.
             </p>
 
             <div className="mt-5 flex items-center gap-3">

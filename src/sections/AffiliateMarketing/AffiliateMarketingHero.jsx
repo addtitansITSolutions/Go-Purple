@@ -171,10 +171,9 @@ const AffiliateMarketingHero = () => {
             "
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              Affiliate marketing should be more than another acquisition
-              channel. We connect your brand with the right publishers,
-              creators and communities to turn trusted recommendations into
-              measurable revenue.
+              Affiliate Marketing should be more than just a checkbox on your acquisition list. We match your
+              brand with publishers, creators, and communities with real influence, so what they say about you
+              turns into revenue you can track.
             </p>
 
             {/* CTA */}
@@ -233,9 +232,8 @@ const AffiliateMarketingHero = () => {
             <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.16em] text-gray-400">
               What we do
             </span>
-
             <p className="mt-2 font-[var(--font-display)] text-sm font-semibold text-[var(--dark)]">
-              Build valuable partnerships
+              Grow through real partnerships
             </p>
           </div>
 
@@ -246,7 +244,7 @@ const AffiliateMarketingHero = () => {
             </span>
 
             <p className="mt-2 font-[var(--font-display)] text-sm font-semibold text-[var(--dark)]">
-              Partnerships × Performance × Trust
+             Relationships × Trust × Results
             </p>
           </div>
 

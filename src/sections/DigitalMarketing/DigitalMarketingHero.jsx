@@ -150,9 +150,10 @@ const DigitalMarketingHero = () => {
             "
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              Digital marketing should do more than generate attention.
-              We build strategies that connect your brand with the right
-              people and turn that attention into meaningful growth.
+              Customer expectations are constantly shifting. Competition keeps sharpening. Businesses cannot
+rely on cookie-cutter campaigns or the same content template running on repeat if they want to
+keep up. We build strategies that put you in front of the right audience and turn that attention into
+results that matter to your business.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">

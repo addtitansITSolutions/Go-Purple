@@ -8,45 +8,45 @@ import { useEffect, useRef, useState } from "react";
 
 const clients = [
   {
-    name: "NOVA",
-    category: "E-commerce",
-    description:
-      "A modern retail brand focused on creating better digital shopping experiences.",
+    name: "ANGEL ONE",
+    // category: "E-commerce",
+    // description:
+    //   "A modern retail brand focused on creating better digital shopping experiences.",
     logo: "/partners/angelone.png",
   },
   {
-    name: "LUMEN",
-    category: "Lifestyle",
-    description:
-      "A lifestyle brand building a stronger digital presence through creative storytelling.",
+    name: "HDFC SKY",
+    // category: "Lifestyle",
+    // description:
+    //   "A lifestyle brand building a stronger digital presence through creative storytelling.",
     logo: "/partners/hdfcsky.png",
   },
   {
-    name: "VERTEX",
-    category: "Technology",
-    description:
-      "A growing technology brand looking to turn digital attention into meaningful growth.",
+    name: "MEETI",
+    // category: "Technology",
+    // description:
+    //   "A growing technology brand looking to turn digital attention into meaningful growth.",
     logo: "/partners/meeti.png",
   },
   {
-    name: "MOTION",
-    category: "Consumer Brand",
-    description:
-      "A consumer-focused brand combining bold creative with performance-led marketing.",
+    name: "PARI MATCH",
+    // category: "Consumer Brand",
+    // description:
+    //   "A consumer-focused brand combining bold creative with performance-led marketing.",
     logo: "/partners/parimatch.png",
   },
   {
-    name: "ARCO",
-    category: "Creative",
-    description:
-      "A creative-led business redefining its visual identity and digital experience.",
+    name: "SMART COIN",
+    // category: "Creative",
+    // description:
+    //   "A creative-led business redefining its visual identity and digital experience.",
     logo: "/partners/smartcoin.png",
   },
   {
-    name: "NEXA",
-    category: "Digital",
-    description:
-      "A digital-first brand focused on building a more memorable online presence.",
+    name: "UNACADEMY",
+    // category: "Digital",
+    // description:
+    //   "A digital-first brand focused on building a more memorable online presence.",
     logo: "/partners/unacademy.png",
   },
 ];

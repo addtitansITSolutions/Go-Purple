@@ -12,25 +12,25 @@ const reasons = [
     number: "01",
     title: "Reach the right people",
     description:
-      "Connect with the audiences that matter most to your business through targeted channels, campaigns and messaging.",
+      "We connect with the audiences that matter most to your business through targeted channels, campaigns, and messaging.",
     icon: Target,
     size: "lg:col-span-2",
     theme: "dark",
   },
   {
     number: "02",
-    title: "Build meaningful visibility",
+    title: "Build visibility that matters",
     description:
-      "Put your brand in front of people at the moments that matter — when they are discovering, considering and choosing.",
+      "We put your brand in front of people at the moments that count, when they are discovering, comparing, and deciding.",
     icon: Eye,
     size: "",
     theme: "purple",
   },
   {
     number: "03",
-    title: "Measure what matters",
+    title: "what actually matters",
     description:
-      "Use real performance data to understand what works, improve what doesn't and make smarter marketing decisions.",
+      "We use real performance data to understand what is working, fix what is not, and make smarter decisions going forward.",
     icon: BarChart3,
     size: "",
     theme: "light",
@@ -39,16 +39,16 @@ const reasons = [
     number: "04",
     title: "Turn attention into growth",
     description:
-      "Move beyond impressions and engagement with campaigns designed to generate leads, customers and sustainable growth.",
+      "We move past impressions and engagement with campaigns built to generate leads, customers, and results that last.",
     icon: TrendingUp,
     size: "lg:col-span-2",
     theme: "yellow",
   },
   {
     number: "04",
-    title: "Turn attention into growth",
+    title: "Build momentum that lasts",
     description:
-      "Move beyond impressions and engagement with campaigns designed to generate leads, customers and sustainable growth.",
+      "We keep refining what is working so your growth compounds instead of resetting with every new campaign.",
     icon: TrendingUp,
     size: "lg:col-span-2",
     theme: "yellow",
@@ -82,14 +82,14 @@ const DigitalMarketingWhy = () => {
           </div>
 
           <h2 className="font-[var(--font-display)] text-4xl font-semibold leading-[1.02] tracking-[-0.055em] text-[var(--dark)] sm:text-5xl lg:text-7xl">
-            Digital gives your brand{" "}
-            <span className="text-[var(--primary)]">room to grow.</span>
+           Digital Expands Your{" "}
+            <span className="text-[var(--primary)]">Growth Potential.</span>
           </h2>
 
           <p className="mt-6 max-w-2xl font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-            Your audience is already online. The opportunity is to reach them
-            with the right message, at the right moment, and turn attention
-            into something meaningful for your business.
+            The whole world is connected to the digital space. The real opportunity is reaching them with the
+            right message, at the right time, and turning that attention into something that actually matters for
+            your business.
           </p>
         </motion.div>
 

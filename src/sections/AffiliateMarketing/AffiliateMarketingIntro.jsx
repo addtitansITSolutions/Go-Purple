@@ -5,19 +5,19 @@ import { ArrowUpRight } from "lucide-react";
 const points = [
   {
     number: "01",
-    title: "Find the right partners",
+    title: "Find Partners Worth Working With :",
     description:
-      "We identify publishers, creators and affiliate partners whose audiences genuinely align with your brand and offer.",
+      "We identify publishers, creators, and affiliate partners whose audience aligns with your brand and offer.",
   },
   {
     number: "02",
-    title: "Build partnerships that work",
+    title: "Build A Program That Works Both Ways :",
     description:
       "From commission structures to campaign messaging, we create partnerships that give both brands and affiliates a reason to perform.",
   },
   {
     number: "03",
-    title: "Scale what performs",
+    title: "Scale What Is Working :",
     description:
       "We track performance, optimize the channel and double down on the partnerships that consistently drive valuable customers.",
   },
@@ -43,16 +43,15 @@ const AffiliateMarketingIntro = () => {
           </span>
 
           <h2 className="font-[var(--font-display)] text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-            Partnerships that turn{" "}
+            Partnerships that translate{" "}
             <span className="text-[var(--primary)]">recommendations</span>{" "}
-            into revenue.
+            into growth
           </h2>
 
           <p className="mt-6 max-w-2xl font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-            Affiliate marketing works best when the partnership feels
-            natural. We connect brands with the publishers, creators and
-            communities their customers already trust — creating a channel
-            built around relevance, performance and measurable growth.
+            The most effective affiliate programs never feel like advertising. We pair your brand with publishers,
+            creators, and communities whose audience already trusts them. You get a channel built on
+            relevance, consistency, and measurable results.
           </p>
         </motion.div>
 
@@ -72,16 +71,15 @@ const AffiliateMarketingIntro = () => {
               className="border-b border-[var(--border)] py-8 lg:border-b-0 lg:border-r lg:pr-12 lg:py-12"
             >
               <p className="max-w-xs font-[var(--font-display)] text-xl font-semibold leading-[1.25] tracking-[-0.025em] text-[var(--dark)] sm:text-2xl">
-                The right partnership can become one of your most valuable
-                growth channels.
+                A strong partner network can become one of your most powerful growth assets.
               </p>
 
               <div className="mt-8 flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-[var(--secondary)]" />
+                {/* <span className="h-2 w-2 rounded-full bg-[var(--secondary)]" /> */}
 
-                <span className="font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.16em] text-[var(--text)]">
+                {/* <span className="font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.16em] text-[var(--text)]">
                   Performance with purpose
-                </span>
+                </span> */}
               </div>
             </motion.div>
 

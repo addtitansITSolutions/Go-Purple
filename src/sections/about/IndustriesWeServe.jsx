@@ -2,96 +2,153 @@ import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   Landmark,
-  Gamepad2,
+  House,
+  Sun,
   ShieldCheck,
   HeartPulse,
   ShoppingBag,
-  GraduationCap,
+  WalletCards,
+  BadgeCheck,
+  Trophy,
+  Pill
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const industries = [
   {
     number: "01",
-    title: "Banking & Fintech",
+    title: "Home Improvement",
     description:
-      "Digital experiences and growth solutions for modern financial products and services.",
+      "Digital growth solutions for brands helping customers improve, renovate and maintain their homes.",
     services: [
-      "Investment Banking",
-      "Digital Lending",
-      "UPIs",
-      "Pay Later",
-      "Broking",
+      "Home Renovation",
+      "Remodeling",
+      "Home Services",
+      "Roofing",
+      "Contractors",
     ],
-    icon: Landmark,
+    icon: House,
   },
   {
     number: "02",
-    title: "Betting & iGaming",
+    title: "Insurance",
     description:
-      "Engaging digital experiences built for high-intent gaming and sports audiences.",
+      "Digital experiences and growth strategies designed for modern insurance products and customer journeys.",
     services: [
-      "Bingo",
-      "Poker",
-      "eSports",
-      "Fantasy Sports",
-      "Virtual Sports",
-    ],
-    icon: Gamepad2,
-  },
-  {
-    number: "03",
-    title: "Utilities",
-    description:
-      "Useful digital products designed around security, productivity and everyday needs.",
-    services: [
-      "VPN",
-      "Security",
-      "Electric Vehicle",
-      "Productivity",
-      "Utility Apps",
+      "Auto Insurance",
+      "Home Insurance",
+      "Life Insurance",
+      "Health Insurance",
+      "Insurance Services",
     ],
     icon: ShieldCheck,
   },
   {
-    number: "04",
-    title: "Health & Fitness",
+    number: "03",
+    title: "Lending",
     description:
-      "Digital solutions that help people build healthier, more connected lifestyles.",
+      "Performance-focused digital solutions that connect lending products with high-intent audiences.",
     services: [
-      "Wearable Fitness Tech",
-      "Nutrition & Diet",
-      "Personal Training Apps",
+      "Personal Loans",
+      "Business Loans",
+      "Digital Lending",
+      "Consumer Finance",
+      "Credit",
+    ],
+    icon: Landmark,
+  },
+  {
+    number: "04",
+    title: "Debt Services",
+    description:
+      "Digital acquisition strategies for businesses helping customers manage, reduce and resolve debt.",
+    services: [
+      "Debt Relief",
+      "Debt Consolidation",
+      "Credit Services",
+      "Financial Solutions",
+    ],
+    icon: WalletCards,
+  },
+  {
+    number: "05",
+    title: "Solar",
+    description:
+      "Growth campaigns that connect solar brands with homeowners interested in smarter energy solutions.",
+    services: [
+      "Solar Installation",
+      "Residential Solar",
+      "Solar Financing",
+      "Energy Solutions",
+    ],
+    icon: Sun,
+  },
+  {
+    number: "06",
+    title: "Warranty Services",
+    description:
+      "Digital growth solutions for warranty providers protecting the products, vehicles and services customers rely on.",
+    services: [
+      "Vehicle Warranty",
+      "Home Warranty",
+      "Product Warranty",
+      "Protection Plans",
+    ],
+    icon: BadgeCheck,
+  },
+  {
+    number: "07",
+    title: "Health And Wellness",
+    description:
+      "Digital strategies designed to connect health and wellness brands with audiences looking for better everyday solutions.",
+    services: [
+      "Fitness",
       "Wellness",
+      "Nutrition",
       "Lifestyle",
+      "Health Services",
     ],
     icon: HeartPulse,
   },
   {
-    number: "05",
-    title: "E-commerce",
+    number: "08",
+    title: "Sweepstakes",
     description:
-      "Commerce experiences that make discovering, shopping and returning easier.",
+      "Engaging acquisition strategies designed to attract audiences and drive participation through compelling campaigns.",
     services: [
-      "Home & Furniture",
-      "Beauty & Wellness",
-      "Grocery Shopping",
-      "Fashion & Apparel",
+      "Giveaways",
+      "Contests",
+      "Promotions",
+      "Lead Generation",
     ],
-    icon: ShoppingBag,
+    icon: Trophy,
   },
   {
-    number: "06",
-    title: "Education",
+    number: "09",
+    title: "Nutraceuticals",
     description:
-      "Digital learning experiences designed to make knowledge more accessible and engaging.",
+      "Digital growth strategies for brands offering supplements and wellness-focused nutritional products.",
     services: [
-      "Coding & Technology",
-      "Online Learning",
-      "Language Learning Apps",
-      "AI Tutor",
+      "Dietary Supplements",
+      "Vitamins",
+      "Sports Nutrition",
+      "Wellness Products",
     ],
-    icon: GraduationCap,
+    icon: Pill,
+  },
+  {
+    number: "10",
+    title: "E-Commerce",
+    description:
+      "Commerce growth solutions that help brands attract customers, increase conversions and build lasting relationships.",
+    services: [
+      "Fashion & Apparel",
+      "Beauty & Wellness",
+      "Home & Furniture",
+      "Grocery",
+      "Consumer Products",
+    ],
+    icon: ShoppingBag,
   },
 ];
 
@@ -115,16 +172,16 @@ const IndustriesWeServe = () => {
             </p>
 
             <h2 className="max-w-[600px] font-[var(--font-display)] text-4xl font-semibold leading-[0.98] tracking-[-0.05em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-              Experience across{" "}
-              <span className="text-[var(--primary)]">digital industries.</span>
+              We build marketing plans{" "}
+              <span className="text-[var(--primary)]">suited to businesses in:</span>
             </h2>
           </div>
 
-          <p className="max-w-[620px] text-base leading-7 text-[var(--text)] lg:ml-auto lg:text-lg">
+          {/* <p className="max-w-[620px] text-base leading-7 text-[var(--text)] lg:ml-auto lg:text-lg">
             We work across high-growth digital categories, combining strategy,
             creativity and performance to build experiences that connect with
             the people who matter.
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Industry Grid */}
@@ -198,7 +255,7 @@ const IndustriesWeServe = () => {
         </div>
 
         {/* Bottom Statement */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -216,7 +273,7 @@ const IndustriesWeServe = () => {
             <span className="h-2 w-2 rounded-full bg-[var(--secondary)]" />
             Strategy × Creativity × Performance
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

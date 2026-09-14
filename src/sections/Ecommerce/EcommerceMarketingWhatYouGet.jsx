@@ -12,28 +12,28 @@ const deliverables = [
     number: "01",
     title: "E-commerce Strategy",
     description:
-      "A clear growth roadmap built around your products, audience, positioning and commercial goals.",
+      "A clear growth plan built around your products, your audience, and what you are trying to achieve.",
     icon: ShoppingBag,
   },
   {
     number: "02",
     title: "Store & Experience",
     description:
-      "Customer-focused journeys, landing experiences and improvements that make discovering and buying easier.",
+      "Customer-focused pages, journeys, and improvements that make discovering and buying easier.",
     icon: LayoutDashboard,
   },
   {
     number: "03",
-    title: "Acquisition Campaigns",
+    title: "Traffic And Acquisition",
     description:
-      "Performance-led campaigns across paid, social, search and other channels to bring qualified traffic.",
+      "Performance-driven campaigns across paid, social, search, and other channels that bring in qualified visitors.",
     icon: Megaphone,
   },
   {
     number: "04",
     title: "Retention & Growth",
     description:
-      "Remarketing and retention strategies designed to increase repeat purchases and long-term customer value.",
+      "Remarketing and retention strategies built to increase repeat purchases and long-term customer value.",
     icon: RefreshCw,
   },
 ];
@@ -87,9 +87,8 @@ const EcommerceMarketingWhatYouGet = () => {
           </div>
 
           <p className="max-w-[620px] text-base leading-7 text-[var(--text)] lg:ml-auto lg:text-lg">
-            From strategy and acquisition to customer experience and
-            retention, we bring the pieces together so your e-commerce
-            operation can move with clarity and purpose.
+            From strategy and traffic to the shopping experience and repeat business, we bring
+            every piece together so your store can move forward with a clear plan.
           </p>
         </motion.div>
 
@@ -119,7 +118,7 @@ const EcommerceMarketingWhatYouGet = () => {
               </p>
 
               <h3 className="max-w-[500px] font-[var(--font-display)] text-3xl font-semibold leading-[1.02] tracking-[-0.045em] sm:text-4xl lg:text-[46px]">
-                A stronger store is more than a better-looking store.
+                A stronger store is about more than good looks.
               </h3>
             </div>
 
@@ -128,8 +127,8 @@ const EcommerceMarketingWhatYouGet = () => {
 
               <div className="flex items-end justify-between gap-6">
                 <p className="max-w-[360px] text-sm leading-6 text-white/55">
-                  We connect strategy, experience and performance to create
-                  an e-commerce ecosystem that works as one.
+                  We bring together strategy, experience, and performance to build a store that works as
+                  one connected system, not a set of separate pieces.
                 </p>
 
                 <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/15 sm:flex">

@@ -171,9 +171,8 @@ const EcommerceMarketingHero = () => {
             "
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              E-commerce growth is about more than getting people to your
-              store. We create strategies and experiences that make it easier
-              to discover, trust, buy and come back for more.
+              Running an online store takes more than getting traffic to your homepage. We build strategies and
+              experiences that make it easier for shoppers to find you, trust you, buy from you, and return.
             </p>
 
             {/* CTA */}

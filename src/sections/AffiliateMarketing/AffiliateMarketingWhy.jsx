@@ -64,8 +64,8 @@ const AffiliateMarketingWhy = () => {
           </div>
 
           <p className="max-w-md font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8 lg:pb-1">
-            We build affiliate ecosystems around genuine partnerships,
-            measurable performance and long-term value — not just clicks.
+           Your Growth Feels More Authentic when more people vouch for your brand.
+We build affiliate programs with real partners, results you can track, and value that lasts.
           </p>
         </motion.div>
 
@@ -90,7 +90,7 @@ const AffiliateMarketingWhy = () => {
             {/* Top */}
             <div className="flex items-start justify-between">
               <span className="font-[var(--font-display)] text-xs font-bold tracking-[0.08em] text-white/35">
-                04
+                01
               </span>
 
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-500 group-hover:rotate-6 group-hover:bg-[var(--primary)]">
@@ -101,20 +101,19 @@ const AffiliateMarketingWhy = () => {
             {/* Content */}
             <div className="absolute bottom-8 left-7 right-7 sm:bottom-9 sm:left-9 sm:right-9">
               <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--secondary)]">
-                Built to scale
+                BUILT TO LAST
               </span>
 
               <h3 className="mt-4 max-w-lg font-[var(--font-display)] text-3xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-4xl lg:text-5xl">
-                Turn partnerships into a{" "}
+                Turn partners into a{" "}
                 <span className="text-[var(--secondary)]">
-                  scalable revenue channel.
+                  channel you can count on.
                 </span>
               </h3>
 
               <p className="mt-5 max-w-lg font-[var(--font-body)] text-sm leading-6 text-white/60 sm:text-base sm:leading-7">
-                The goal isn't simply to recruit more affiliates. It's to
-                build a network where the right partners keep bringing
-                qualified customers to your business.
+                Bringing on more affiliates is not really the goal. The real goal is a network where the right partners
+keep sending you customers worth having.
               </p>
 
               <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-5">

@@ -4,27 +4,27 @@ import { ArrowRight } from "lucide-react";
 const journey = [
   {
     number: "01",
-    title: "Get discovered",
+    title: "Get Found",
     description:
-      "Put your products in front of the right shoppers through search, social, content and performance-driven campaigns.",
+      "Put your products in front of the right shoppers through search, social, content, and campaigns built to perform.",
   },
   {
     number: "02",
-    title: "Create confidence",
+    title: "Build Confidence",
     description:
-      "Strong creative, clear messaging and a frictionless experience help customers understand why your product is worth choosing.",
+      "Clear messaging, strong creative, and a smooth experience help shoppers understand why your product is worth choosing.",
   },
   {
     number: "03",
-    title: "Make buying easy",
+    title: "Simplify Purchases",
     description:
-      "Every part of the journey should remove hesitation — from product discovery and landing pages to checkout.",
+      "Every part of the path should remove friction, from the first product page to the final checkout screen.",
   },
   {
     number: "04",
     title: "Keep them coming back",
     description:
-      "Turn one-time purchases into lasting customer value through retention, remarketing and meaningful engagement.",
+      "Turn a single purchase into lasting value through retention, remarketing, and ongoing engagement.",
   },
 ];
 
@@ -53,20 +53,19 @@ const EcommerceMarketingIntro = () => {
             </span>
 
             <h2 className="mt-5 max-w-4xl font-[var(--font-display)] text-4xl font-semibold leading-[1.02] tracking-[-0.055em] text-[var(--dark)] sm:text-5xl lg:text-7xl">
-              Great stores don't just{" "}
+              Great stores do not just{" "}
               <span className="text-[var(--primary)]">
                 sell products.
               </span>
               <br />
-              They create reasons to buy.
+              They give people a reason to buy.
             </h2>
           </div>
 
           <p className="max-w-lg font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8 lg:pb-1">
-            From the first impression to the final checkout, we look at the
-            entire customer journey and find the opportunities that can turn
-            more visitors into customers — and more customers into repeat
-            buyers.
+            From the first visit to the final checkout, we look at the whole customer journey
+            and find where small changes can turn more browsers into buyers, and more buyers into repeat
+            customers.
           </p>
         </motion.div>
 
@@ -127,7 +126,7 @@ const EcommerceMarketingIntro = () => {
           </span>
 
           <span className="font-[var(--font-body)] text-sm text-[var(--text)]">
-            Every step is an opportunity to grow.
+            Every step brings you closer to a sale. Small wins along the way add up to real growth.
           </span>
         </motion.div>
       </div>
