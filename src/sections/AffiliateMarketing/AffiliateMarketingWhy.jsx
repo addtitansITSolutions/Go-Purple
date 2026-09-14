@@ -19,7 +19,7 @@ const pillars = [
     number: "02",
     title: "Trust that converts",
     description:
-      "We focus on authentic placements and recommendations that feel useful rather than forced.",
+      "We prioritize honest placements and recommendations that feel genuinely useful, not pushed.",
     icon: Handshake,
   },
   {
@@ -112,8 +112,7 @@ We build affiliate programs with real partners, results you can track, and value
               </h3>
 
               <p className="mt-5 max-w-lg font-[var(--font-body)] text-sm leading-6 text-white/60 sm:text-base sm:leading-7">
-                Bringing on more affiliates is not really the goal. The real goal is a network where the right partners
-keep sending you customers worth having.
+                Bringing on more affiliates is not really the goal. The real goal is a network where the right partners keep sending you customers worth having.
               </p>
 
               <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-5">
