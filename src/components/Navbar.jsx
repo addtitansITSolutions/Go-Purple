@@ -360,7 +360,7 @@ const Navbar = ({ forceScrolled = false }) => {
                 href="mailto:info@gopurple.com"
                 className="mt-2 inline-block font-[var(--font-body)] text-lg text-white transition-colors duration-300 hover:text-[var(--primary)]"
               >
-                info@gopurple.com
+                info@gopurplenut.com
               </a>
             </div>
 
