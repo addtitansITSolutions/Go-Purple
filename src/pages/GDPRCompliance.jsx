@@ -3,229 +3,218 @@ import { ArrowLeft, ArrowUpRight, LockKeyhole } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const sections = [
   {
-    title: "1. Our Commitment",
-    content: (
-      <p>
-        GoPurple respects the privacy and data protection rights of individuals
-        and is committed to handling personal information responsibly. This
-        page explains how we approach the requirements and principles of the
-        General Data Protection Regulation (GDPR) where applicable.
-      </p>
-    ),
-  },
-  {
-    title: "2. What Is GDPR?",
-    content: (
-      <p>
-        The General Data Protection Regulation is a European Union data
-        protection framework designed to strengthen individuals' rights and
-        establish requirements for organizations that process personal data.
-        Depending on your location and our activities, certain GDPR
-        requirements may apply to the processing of your personal information.
-      </p>
-    ),
-  },
-  {
-    title: "3. Personal Data We May Process",
+    title: "GDPR Compliance",
     content: (
       <>
         <p>
-          Depending on how you interact with our website or services, we may
-          process information such as:
+          Go Purple Nut works with clients, partners, and affiliates across
+          the country and, in some cases, around the world. The European Union
+          is not our primary market, but whenever we handle data of someone
+          based in the EU or UK, we hold ourselves to the standard set by the
+          General Data Protection Regulation (GDPR). This page explains what
+          that means in practice.
         </p>
 
-        <ul>
-          <li>Name and contact information</li>
-          <li>Company or business information</li>
-          <li>Project or service-related information</li>
-          <li>Information submitted through contact forms</li>
-          <li>Website usage and interaction information</li>
-          <li>Technical information such as browser or device details</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    title: "4. How We Use Personal Data",
-    content: (
-      <p>
-        We may process personal information to respond to inquiries, provide
-        requested services, communicate about projects, improve our website
-        and services, understand website usage, maintain security, prevent
-        misuse, and meet applicable legal or regulatory obligations.
-      </p>
-    ),
-  },
-  {
-    title: "5. Lawful Basis for Processing",
-    content: (
-      <>
-        <p>
-          Where GDPR applies, we seek to process personal data on an
-          appropriate lawful basis. Depending on the circumstances, this may
-          include:
-        </p>
-
-        <ul>
-          <li>Your consent</li>
-          <li>Performance of a contract or steps taken before entering one</li>
-          <li>Our legitimate business interests</li>
-          <li>Compliance with a legal obligation</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    title: "6. Your GDPR Rights",
-    content: (
-      <>
-        <p>
-          Where applicable, you may have rights concerning your personal data,
-          including the right to:
-        </p>
-
-        <ul>
-          <li>Access the personal data we hold about you</li>
-          <li>Request correction of inaccurate or incomplete information</li>
-          <li>Request deletion of your personal data</li>
-          <li>Request restriction of certain processing</li>
-          <li>Object to certain types of processing</li>
-          <li>Withdraw consent where processing is based on consent</li>
-          <li>Request portability of certain information</li>
-        </ul>
-
-        <p>
-          These rights may be subject to limitations and conditions under
-          applicable law.
+        <p className="mt-4">
+          If you are an EU or UK resident, the GDPR gives you real,
+          enforceable control over your personal data. We collect only what we
+          need, explain why we are collecting it, and give you a clear way to
+          access, correct, or delete it whenever you ask.
         </p>
       </>
     ),
   },
+
   {
-    title: "7. Consent and Withdrawal",
-    content: (
-      <p>
-        Where we rely on your consent to process personal information, you may
-        withdraw that consent at any time. Withdrawing consent does not affect
-        the lawfulness of processing that occurred before the withdrawal.
-      </p>
-    ),
-  },
-  {
-    title: "8. Cookies and Tracking",
-    content: (
-      <p>
-        Our website may use cookies and similar technologies for functionality,
-        analytics, security, and other legitimate purposes. Where consent is
-        required, appropriate consent mechanisms may be used. You can also
-        manage certain cookie preferences through your browser settings.
-      </p>
-    ),
-  },
-  {
-    title: "9. Data Retention",
-    content: (
-      <p>
-        We retain personal data only for as long as reasonably necessary for
-        the purposes for which it was collected, including business,
-        contractual, security, dispute-resolution, and legal requirements.
-        Retention periods may vary depending on the type and purpose of the
-        information.
-      </p>
-    ),
-  },
-  {
-    title: "10. Data Security",
-    content: (
-      <p>
-        We use reasonable technical and organizational measures intended to
-        protect personal information against unauthorized access, loss,
-        misuse, alteration, or disclosure. However, no online transmission or
-        storage system can be guaranteed to be completely secure.
-      </p>
-    ),
-  },
-  {
-    title: "11. Third-Party Service Providers",
-    content: (
-      <p>
-        We may work with third-party providers that support website hosting,
-        analytics, communications, security, advertising, or other business
-        operations. Where appropriate, we seek to ensure that personal data
-        processed by such providers is handled in accordance with applicable
-        privacy and data protection requirements.
-      </p>
-    ),
-  },
-  {
-    title: "12. International Data Transfers",
-    content: (
-      <p>
-        Some service providers or business partners may process information in
-        countries outside the European Economic Area. Where GDPR applies, we
-        seek to use appropriate safeguards for international transfers as
-        required by applicable data protection law.
-      </p>
-    ),
-  },
-  {
-    title: "13. Data Protection Requests",
-    content: (
-      <p>
-        If you would like to exercise an applicable privacy right or ask a
-        question about how we process your personal data, you can contact us
-        using the details below. We may need to verify your request before
-        completing it in order to protect your information.
-      </p>
-    ),
-  },
-  {
-    title: "14. Complaints",
-    content: (
-      <p>
-        If you believe that your personal data has not been handled in
-        accordance with applicable data protection law, you may have the right
-        to raise a complaint with the relevant data protection authority in
-        your country or region.
-      </p>
-    ),
-  },
-  {
-    title: "15. Updates to This Page",
-    content: (
-      <p>
-        We may update this GDPR Compliance page when our privacy practices,
-        services, or applicable legal requirements change. Any updated version
-        will be published on this page together with a revised effective date.
-      </p>
-    ),
-  },
-  {
-    title: "16. Contact Us",
+    title: "Two Roles We Play",
     content: (
       <>
         <p>
-          For questions about GDPR, privacy, or requests concerning your
-          personal information, please contact us.
+          Because of how performance marketing works, we handle data in two
+          different capacities.
         </p>
 
-        <div className="mt-6 rounded-2xl border border-black/10 bg-black/[0.025] p-6">
-          <p className="!mb-1 font-semibold text-black">
-            GoPurple
-          </p>
+        <h3 className="mt-6 font-semibold text-black">
+          Direct Interaction with Visitors
+        </h3>
 
-          <p className="!mb-1">
-            Email: hello@gopurple.com
-          </p>
+        <p className="mt-3">
+          When someone fills out a form on our website, we decide how that data
+          will be utilized. Under the GDPR, this makes us the controller.
+        </p>
 
-          <p className="!mb-0">
-            Website: gopurple.com
-          </p>
+        <h3 className="mt-6 font-semibold text-black">
+          Running A Campaign for A Client
+        </h3>
+
+        <p className="mt-3">
+          For any campaign that touches a client&apos;s personal data, we act
+          on that client&apos;s instructions. Under the GDPR, this makes us the
+          processor, and a signed data processing agreement governs exactly
+          what we can and cannot do with that data.
+        </p>
+
+        <p className="mt-4">
+          If you are a client and need a data processing agreement in place,
+          reach out to (email), and we will prepare one.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    title: "Data We Collect And Why",
+    content: (
+      <>
+        <p>
+          Depending on how you interact with us, this may include your name,
+          email address, phone number, and company details. If you are engaging
+          with us as an affiliate or campaign partner, we also collect click,
+          conversion, and commission data to evaluate performance.
+        </p>
+
+        <p className="mt-4">
+          We only process this information on one of the following grounds, as
+          the GDPR requires:
+        </p>
+
+        <ul className="mt-4 list-disc space-y-2 pl-5">
+          <li>You have given us consent.</li>
+          <li>It is necessary to deliver a service you have asked for</li>
+          <li>
+            We have a legitimate business reason, such as measuring a campaign
+            or preventing fraud, that does not override your own rights.
+          </li>
+          <li>We are legally required to</li>
+        </ul>
+      </>
+    ),
+  },
+
+  {
+    title: "Your Rights, Plainly Stated",
+    content: (
+      <>
+        <p>
+          As an EU or UK resident, you can ask us to:
+        </p>
+
+        <div className="mt-6 overflow-x-auto rounded-2xl border border-black/10">
+          <table className="w-full min-w-[600px] border-collapse text-left">
+            <thead>
+              <tr className="border-b border-black/10 bg-black/[0.025]">
+                <th className="px-5 py-4 font-[var(--font-display)] text-sm font-semibold text-black">
+                  Right
+                </th>
+                <th className="px-5 py-4 font-[var(--font-display)] text-sm font-semibold text-black">
+                  What It Means
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr className="border-b border-black/10">
+                <td className="px-5 py-4 font-semibold text-black">Access</td>
+                <td className="px-5 py-4">
+                  Show me what data you hold on me
+                </td>
+              </tr>
+
+              <tr className="border-b border-black/10">
+                <td className="px-5 py-4 font-semibold text-black">Correct</td>
+                <td className="px-5 py-4">
+                  Fix something that is wrong
+                </td>
+              </tr>
+
+              <tr className="border-b border-black/10">
+                <td className="px-5 py-4 font-semibold text-black">Delete</td>
+                <td className="px-5 py-4">
+                  Remove my data, where there is no legal reason to keep it
+                </td>
+              </tr>
+
+              <tr className="border-b border-black/10">
+                <td className="px-5 py-4 font-semibold text-black">
+                  Restrict
+                </td>
+                <td className="px-5 py-4">
+                  Pause how you are using my data
+                </td>
+              </tr>
+
+              <tr className="border-b border-black/10">
+                <td className="px-5 py-4 font-semibold text-black">Object</td>
+                <td className="px-5 py-4">
+                  Stop using my data for a specific purpose
+                </td>
+              </tr>
+
+              <tr className="border-b border-black/10">
+                <td className="px-5 py-4 font-semibold text-black">
+                  Transfer
+                </td>
+                <td className="px-5 py-4">
+                  Give me my data in a format I can take elsewhere
+                </td>
+              </tr>
+
+              <tr>
+                <td className="px-5 py-4 font-semibold text-black">
+                  Withdraw Consent
+                </td>
+                <td className="px-5 py-4">
+                  Undo an earlier opt-in at any time
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <p className="mt-6">
+          We respond to any of these requests within one month, as required by
+          law. Send requests to (email). Feel free to raise a concern directly
+          with your national data protection authority.
+        </p>
       </>
+    ),
+  },
+
+  {
+    title: "Moving Data Across Borders",
+    content: (
+      <p>
+        Serving clients in multiple countries means data from the EU or UK is
+        often processed outside those regions. When that happens, we rely on
+        recognized safeguards, primarily the European Commission&apos;s
+        Standard Contractual Clauses, to keep protection levels consistent.
+      </p>
+    ),
+  },
+
+  {
+    title: "If Something Goes Wrong",
+    content: (
+      <p>
+        In the event of a data breach, we notify the relevant supervisory
+        authority within 72 hours of identifying it, and we inform affected
+        individuals as required by law.
+      </p>
+    ),
+  },
+
+  {
+    title: "A Note on Younger Users",
+    content: (
+      <p>
+        Our services are not built for anyone under the age of 16, and we do
+        not knowingly collect data from users below that age. If we learn that
+        we have done so, we will delete it promptly.
+      </p>
     ),
   },
 ];
@@ -233,6 +222,11 @@ const sections = [
 const GDPRCompliance = () => {
   return (
     <>
+        <SEO
+          title="GDPR Compliance"
+          description="Learn how Go Purple Nut handles personal data and supports GDPR rights for individuals in the EU and UK."
+          path="/gdpr-compliance"
+        />
         <Navbar forceScrolled />
         <main className="min-h-screen bg-[#f4f1eb] text-[#17151a]">
 
@@ -310,10 +304,10 @@ const GDPRCompliance = () => {
                     />
                 </div>
 
-                <p className="font-[var(--font-body)] text-base leading-[1.7] text-black/55 sm:text-lg">
+                {/* <p className="font-[var(--font-body)] text-base leading-[1.7] text-black/55 sm:text-lg">
                     A straightforward overview of how we approach personal data,
                     privacy rights, and GDPR requirements where applicable.
-                </p>
+                </p> */}
 
                 <p className="mt-5 font-[var(--font-body)] text-[10px] uppercase tracking-[0.18em] text-black/35">
                     Effective date: September 7, 2026
@@ -329,7 +323,7 @@ const GDPRCompliance = () => {
             <div className="mx-auto max-w-[1100px] px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-28">
 
             {/* Introduction */}
-            <motion.div
+            {/* <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -341,10 +335,10 @@ const GDPRCompliance = () => {
                 protection and the rights that may be available to individuals
                 under the General Data Protection Regulation.
                 </p>
-            </motion.div>
+            </motion.div> */}
 
             {/* Sections */}
-            <div className="border-t border-black/10">
+            <div className="">
                 {sections.map((section, index) => (
                 <motion.article
                     key={section.title}
@@ -374,7 +368,7 @@ const GDPRCompliance = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className="mt-12 flex items-center justify-between border-t border-black/10 pt-6"
+                className="mt-12 flex items-center justify-between pt-6"
             >
                 <span className="font-[var(--font-body)] text-[10px] uppercase tracking-[0.18em] text-black/30">
                 GoPurple

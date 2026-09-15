@@ -3,8 +3,8 @@ import { ArrowUpRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const outcomes = [
-  "Campaigns built around clear objectives",
-  "Continuous testing and optimization",
+  "Campaigns built around clear goals",
+  "Ongoing testing and refinement",
   "Decisions backed by real performance data",
 ];
 
@@ -47,14 +47,13 @@ const PerformanceMarketingCTA = () => {
               <h2 className="max-w-[800px] font-[var(--font-display)] text-4xl font-semibold leading-[0.98] tracking-[-0.055em] text-white sm:text-5xl lg:text-6xl">
                 Let's turn your marketing spend into{" "}
                 <span className="text-[var(--primary)]">
-                  meaningful growth.
+                  visible results.
                 </span>
               </h2>
 
               <p className="mt-6 max-w-[650px] text-base leading-7 text-white/55 sm:text-lg">
-                Tell us where you want to go. We'll help you build a
-                performance strategy designed to get there with greater
-                clarity, efficiency and momentum.
+                We will help you build a performance strategy to reach your goals with more
+                clarity, more efficiency, and real momentum.
               </p>
 
               <Link

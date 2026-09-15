@@ -18,8 +18,7 @@ const CreativeDesignWhatWeCreate = () => {
           & Identity
         </>
       ),
-      description:
-        "Visual identities that make your brand recognizable and consistent across every touchpoint.",
+      description: "Visual identities that keep your brand recognizable and consistent across every touchpoint.",
       icon: Palette,
       type: "dark",
     },
@@ -33,7 +32,7 @@ const CreativeDesignWhatWeCreate = () => {
         </>
       ),
       description:
-        "Interfaces and digital journeys designed around people, purpose and effortless interaction.",
+        "Interfaces and digital journeys built around people, purpose, and effortless interaction.",
       icon: MonitorSmartphone,
       type: "light",
     },
@@ -47,7 +46,7 @@ const CreativeDesignWhatWeCreate = () => {
         </>
       ),
       description:
-        "Creative concepts built to capture attention, communicate clearly and move people toward action.",
+        "Creative concepts built to grab attention, communicate clearly, and move people toward action.",
       icon: Megaphone,
       type: "yellow",
     },
@@ -61,7 +60,7 @@ const CreativeDesignWhatWeCreate = () => {
         </>
       ),
       description:
-        "Websites and digital experiences where brand, content and interaction work together.",
+        "Websites and digital experiences where brand, content, and interaction work together.",
       icon: Sparkles,
       type: "dark",
     },
@@ -80,7 +79,7 @@ const CreativeDesignWhatWeCreate = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3">
-              <span className="h-2 w-2 rounded-full bg-[var(--secondary)]" />
+              {/* <span className="h-2 w-2 rounded-full bg-[var(--secondary)]" /> */}
 
               <span className="font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
                 What We Create
@@ -95,8 +94,7 @@ const CreativeDesignWhatWeCreate = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="max-w-sm font-[var(--font-body)] text-sm leading-6 text-white/50 lg:text-right"
           >
-            Creative systems built to make brands clearer, experiences better
-            and ideas harder to ignore.
+            Creative systems built to make brands clearer, experiences stronger, and ideas harder to ignore.
           </motion.p>
         </div>
 

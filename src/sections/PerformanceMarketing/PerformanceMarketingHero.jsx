@@ -171,10 +171,9 @@ const PerformanceMarketingHero = () => {
     "
   >
     <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-      Performance marketing should make every marketing dollar work
-      harder. We combine data, creative and continuous optimization to
-      reach the right audience, improve efficiency and turn campaigns
-      into measurable business growth.
+      Performance marketing should make every dollar you spend work harder. We combine data,
+      creative, and constant testing to reach the right audience, improve efficiency, and turn campaigns
+      into results you can actually measure.
     </p>
 
     {/* CTA */}

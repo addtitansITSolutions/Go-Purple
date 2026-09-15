@@ -186,9 +186,8 @@ const CreativeDesignHero = () => {
             "
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              Great creative doesn't just make a brand look better. It makes
-              ideas easier to understand, brands easier to remember and digital
-              experiences easier to connect with.
+              Strong creative does more than make a brand look good. It makes ideas easier to
+understand, brands easier to remember, and digital experiences easier to connect with.
             </p>
 
             {/* CTA */}

@@ -10,10 +10,16 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactForm from "../sections/contact/ContactForm";
+import SEO from "../components/SEO";
 
 const Contact = () => {
   return (
     <>
+      <SEO
+        title="Contact Go Purple Nut"
+        description="Talk to Go Purple Nut about digital marketing, performance marketing, affiliate marketing, e-commerce, influencer marketing, and creative design."
+        path="/contact"
+      />
       <Navbar forceScrolled />
 
       <main className="overflow-hidden bg-white">

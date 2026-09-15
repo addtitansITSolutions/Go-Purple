@@ -5,8 +5,10 @@ const Footer = () => {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Projects", href: "/projects" },
+    // { label: "Projects", href: "/projects" },
     { label: "Contact", href: "/contact" },
+    { label: "Terms and conditions", href: "/terms-and-conditions" },
+    { label: "Copyright & DMCA Policy", href: "/copyright-and-dmca" },
   ];
 
   const serviceLinks = [
@@ -218,7 +220,7 @@ const Footer = () => {
         <div className="flex flex-col gap-5 border-t border-white/10 py-7 sm:flex-row sm:items-center sm:justify-between">
 
           <p className="font-[var(--font-body)] text-xs text-white/40">
-            © {new Date().getFullYear()} GoPurplenet. All rights reserved.
+            © {new Date().getFullYear()} GoPurplenut. All rights reserved.
           </p>
 
           <div className="flex items-center gap-6">

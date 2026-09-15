@@ -13,36 +13,36 @@ const InfluencerMarketingProcess = () => {
     {
       number: "01",
       icon: Search,
-      title: "Discover",
-      text: "We identify creators, communities and audience segments that make sense for your brand.",
+      title: "Audience First",
+      text: "We identify creators, communities, and audience segments that actually make sense for your brand.",
       detail: "Audience first",
     },
     {
       number: "02",
       icon: UserCheck,
-      title: "Match",
-      text: "We evaluate creator relevance, content quality, audience fit and brand alignment.",
+      title: "The Right Fit",
+      text: "We evaluate creator relevance, content quality, audience fit, and brand alignment.",
       detail: "The right fit",
     },
     {
       number: "03",
       icon: Sparkles,
-      title: "Create",
+      title: "Real Content",
       text: "We shape campaign ideas that give creators room to tell your story in their own voice.",
       detail: "Authentic content",
     },
     {
       number: "04",
       icon: Megaphone,
-      title: "Amplify",
+      title: "More Real Reach",
       text: "We turn strong creator content into wider campaigns that extend reach and engagement.",
       detail: "More meaningful reach",
     },
     {
       number: "05",
       icon: BarChart3,
-      title: "Measure",
-      text: "We track campaign performance to understand what worked and where the next opportunity lies.",
+      title: "Growth You Can See",
+      text: "We track campaign performance to understand what worked and where the next opportunity is.",
       detail: "Growth you can see",
     },
   ];
@@ -75,8 +75,8 @@ const InfluencerMarketingProcess = () => {
 
           <div>
             <h2 className="max-w-4xl font-[var(--font-display)] text-4xl font-semibold leading-[0.98] tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-              From the right creator to the
-              <span className="text-[var(--primary)]"> right result.</span>
+              From the right creator to scalable results,
+              <span className="text-[var(--primary)]">  you can see.</span>
             </h2>
           </div>
         </motion.div>
@@ -149,7 +149,7 @@ const InfluencerMarketingProcess = () => {
         </div>
 
         {/* Bottom statement */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -169,10 +169,10 @@ const InfluencerMarketingProcess = () => {
           <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--dark)]">
             <ArrowUpRight size={21} strokeWidth={1.7} />
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom meta */}
-        <div className="mt-8 flex flex-col gap-3 border-t border-black/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        {/* <div className="mt-8 flex flex-col gap-3 border-t border-black/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-[var(--font-display)] text-sm font-semibold text-[var(--dark)] sm:text-base">
             Discover × Match × Create × Amplify × Measure
           </p>
@@ -180,7 +180,7 @@ const InfluencerMarketingProcess = () => {
           <p className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.16em] text-gray-400">
             Built for meaningful influence
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

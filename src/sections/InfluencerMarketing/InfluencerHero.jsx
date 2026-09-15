@@ -171,10 +171,9 @@ const InfluencerHero = () => {
             "
           >
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              Influencer marketing is about more than reaching someone else's
-              audience. We connect brands with creators who have the right
-              voice, community and influence to make your message feel natural
-              and meaningful.
+              Influencer marketing is about more than borrowing someone else's audience. We connect brands
+              with creators who bring the right voice, the right community, and trust to make your message land
+              naturally.
             </p>
 
             {/* <p className="mt-4 font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">

@@ -241,7 +241,7 @@ const IndustriesWeServe = () => {
 
                 {/* Hover Arrow */}
                 <Link 
-                to="/projects"
+                to="/services"
                 className="absolute bottom-7 right-7 flex h-9 w-9 translate-x-2 translate-y-2 items-center justify-center rounded-full bg-[var(--secondary)] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 cursor-pointer">
                   <ArrowUpRight
                     size={17}

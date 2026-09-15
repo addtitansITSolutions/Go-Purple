@@ -5,21 +5,21 @@ const CreativeDesignIntro = () => {
   const points = [
     {
       number: "01",
-      title: "Make ideas clearer",
+      title: "Simplifying your ideas:",
       description:
-        "We turn complex ideas into visual systems that are easier to understand, navigate and remember.",
+        "We turn complicated ideas into visual systems that are easier to understand, navigate, and remember.",
     },
     {
       number: "02",
-      title: "Make brands recognizable",
+      title: "Make Brands Recognizable",
       description:
-        "From visual identity to digital touchpoints, we create consistency that helps your brand stand apart.",
+        "From visual identity to every digital touchpoint, we build consistency that helps your brand stand out.",
     },
     {
       number: "03",
-      title: "Make experiences matter",
+      title: "Make Experiences Matter ",
       description:
-        "Every interaction has a purpose. We design digital experiences that feel natural, useful and engaging.",
+        "Every interaction has a purpose. We design digital experiences that feel natural, useful, and engaging.",
     },
   ];
 
@@ -54,10 +54,10 @@ const CreativeDesignIntro = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="max-w-5xl font-[var(--font-display)] text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl xl:text-7xl">
-              Good design gets attention.
+              Good design earns attention.
               <span className="text-[var(--primary)]">
                 {" "}
-                Great design gives attention a reason to stay.
+                Great design gives people a reason to stay.
               </span>
             </h2>
           </motion.div>
@@ -73,22 +73,20 @@ const CreativeDesignIntro = () => {
         >
           <div>
             <p className="font-[var(--font-display)] text-xl font-semibold leading-tight text-[var(--dark)] sm:text-2xl">
-              Creativity works best when it has a clear purpose.
+              Creativity works best with a clear purpose.
             </p>
           </div>
 
           <div className="max-w-2xl">
             <p className="font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              We don't design for decoration. We design to communicate,
-              connect and create a stronger relationship between your brand
-              and the people experiencing it.
+              We do not design for decoration. We design to communicate clearly, build
+              connection, and strengthen the relationship between your brand and the people experiencing it.
             </p>
 
             <p className="mt-5 font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8">
-              Whether we're shaping a brand, designing a digital product or
-              creating a campaign, every creative decision starts with the
-              same question: what should this make people feel, understand or
-              do?
+              Whether we are shaping a brand, designing a digital product, or building a
+              campaign, every creative decision starts with the same question: what should this make people feel,
+              understand, or do?
             </p>
           </div>
         </motion.div>

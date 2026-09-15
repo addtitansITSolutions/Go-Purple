@@ -13,19 +13,19 @@ const InfluencerMarketingIntro = () => {
       icon: Users,
       title: "The right creators",
       description:
-        "We look beyond follower counts to find creators whose audience, voice and values genuinely align with your brand.",
+        "We look beyond follower counts to find creators whose audience, voice, and values genuinely line up with your brand.",
     },
     {
       number: "02",
       icon: MessageCircle,
       title: "The right story",
       description:
-        "We help shape campaigns that feel natural to the creator and meaningful to the people listening.",
+        "We help shape campaigns that feel natural to the creator and meaningful to the people watching.",
     },
     {
       number: "03",
       icon: TrendingUp,
-      title: "The right outcome",
+      title: "The Right Outcome",
       description:
         "Awareness is only part of the equation. We connect creator activity with measurable engagement, traffic and growth.",
     },
@@ -43,7 +43,7 @@ const InfluencerMarketingIntro = () => {
           transition={{ duration: 0.7 }}
           className="flex items-center gap-3"
         >
-          <span className="h-2 w-2 rounded-full bg-[var(--secondary)]" />
+          {/* <span className="h-2 w-2 rounded-full bg-[var(--secondary)]" /> */}
 
           <span className="font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
             The GoPurple Approach
@@ -71,9 +71,9 @@ const InfluencerMarketingIntro = () => {
               xl:text-7xl
             "
           >
-            Influence isn't bought.
+            Trust is not bought. 
             <span className="text-[var(--primary)]">
-              {" "}It's earned.
+              {" "}It is built.
             </span>
           </motion.h2>
 
@@ -84,9 +84,8 @@ const InfluencerMarketingIntro = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="max-w-xl font-[var(--font-body)] text-base leading-7 text-white/55 sm:text-lg sm:leading-8"
           >
-            The strongest influencer campaigns don't feel like advertising.
-            They feel like a recommendation from someone people already
-            trust. That's where we focus.
+           The strongest creator campaigns never feel like an ad. They feel like a
+           recommendation from someone people already trust. That is exactly where we focus our energy.
           </motion.p>
         </div>
 

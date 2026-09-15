@@ -15,6 +15,7 @@ import {
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const services = [
     {
@@ -76,6 +77,11 @@ const services = [
 const Services = () => {
   return (
     <>
+        <SEO
+        title="Digital Marketing Services"
+        description="Explore Go Purple Nut's digital marketing services across performance marketing, affiliate marketing, e-commerce, influencer marketing, and creative design."
+        path="/services"
+        />
         <Navbar forceScrolled/>
         <main className="overflow-hidden bg-white">
 

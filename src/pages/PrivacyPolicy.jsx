@@ -3,193 +3,129 @@ import { ArrowLeft, ShieldCheck , ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const PrivacyPolicy = () => {
   const sections = [
-    {
-      title: "1. Information We Collect",
-      content: (
-        <>
-          <p>
-            When you interact with GoPurple, we may collect information that
-            you voluntarily provide to us, as well as certain information
-            automatically collected when you use our website.
-          </p>
+  {
+    title: "Personal Information We Collect",
+    content: (
+      <ul className="list-disc space-y-2 pl-5">
+        <li>Full Name</li>
+        <li>Company Name</li>
+        <li>Email Address</li>
+        <li>Phone Number</li>
+        <li>Job Title</li>
+        <li>Business Information</li>
+        <li>Any information submitted through contact forms or inquiries</li>
+      </ul>
+    ),
+  },
 
-          <h3>Information you provide</h3>
+  {
+    title: "Technical Information We Collect",
+    content: (
+      <ul className="list-disc space-y-2 pl-5">
+        <li>IP Address</li>
+        <li>Browser Type</li>
+        <li>Device Information</li>
+        <li>Operating System</li>
+        <li>Pages Visited</li>
+        <li>Time Spent on Pages</li>
+        <li>Referral Sources</li>
+        <li>Cookies</li>
+      </ul>
+    ),
+  },
 
-          <p>
-            This may include your name, email address, phone number, company
-            information, project details, and any other information you choose
-            to provide when contacting us or requesting our services.
-          </p>
+  {
+    title: "How We Use Your Information",
+    content: (
+      <>
+        <p>Your information may be used to:</p>
 
-          <h3>Information collected automatically</h3>
+        <ul className="mt-4 list-disc space-y-2 pl-5">
+          <li>Respond to your inquiries</li>
+          <li>Provide our services</li>
+          <li>Improve our website and your experience on it</li>
+          <li>Develop marketing strategies</li>
+          <li>Send necessary account or service updates</li>
+          <li>Send newsletters or other promotional materials</li>
+        </ul>
+      </>
+    ),
+  },
 
-          <p>
-            When you visit our website, certain technical information may be
-            collected automatically, including your IP address, browser type,
-            device information, pages visited, referring pages, and general
-            usage information.
-          </p>
-        </>
-      ),
-    },
+  {
+    title: "Cookies",
+    content: (
+      <p>
+        Our website may use cookies and similar technologies to analyze and
+        improve site performance, as well as to understand how visitors use
+        our pages. You can disable cookies in your browser settings, but it
+        may affect your browsing experience.
+      </p>
+    ),
+  },
 
-    {
-      title: "2. How We Use Your Information",
-      content: (
-        <p>
-          We may use the information we collect to respond to inquiries,
-          provide and improve our services, communicate with you about
-          projects or services, understand how visitors use our website,
-          maintain website security, and comply with applicable legal
-          obligations.
-        </p>
-      ),
-    },
+  {
+    title: "How We Share Information",
+    content: (
+      <>
+        <p>We do not sell your information. We may share it with:</p>
 
-    {
-      title: "3. Cookies and Similar Technologies",
-      content: (
-        <p>
-          Our website may use cookies and similar technologies to improve
-          functionality, understand website usage, remember preferences, and
-          analyze traffic. You may be able to control or disable cookies
-          through your browser settings. Disabling certain cookies may affect
-          some website functionality.
-        </p>
-      ),
-    },
+        <ul className="mt-4 list-disc space-y-2 pl-5">
+          <li>Trusted technology partners</li>
+          <li>Analytics providers</li>
+          <li>Marketing platforms</li>
+          <li>Legal authorities, where required</li>
+          <li>Service providers who support our website operations</li>
+        </ul>
+      </>
+    ),
+  },
 
-    {
-      title: "4. Analytics and Third-Party Services",
-      content: (
-        <p>
-          We may use third-party analytics, hosting, advertising, or technology
-          providers to help operate and improve our website and services.
-          These providers may process certain information in accordance with
-          their own privacy policies and applicable laws.
-        </p>
-      ),
-    },
+  {
+    title: "Data Security",
+    content: (
+      <p>
+        We use reasonable administrative, technical, and organizational
+        safeguards to protect your personal information against unauthorized
+        access, disclosure, alteration, or loss.
+      </p>
+    ),
+  },
 
-    {
-      title: "5. How We Protect Your Information",
-      content: (
-        <p>
-          We take reasonable administrative, technical, and organizational
-          measures designed to protect the information we collect from
-          unauthorized access, alteration, disclosure, or destruction.
-          However, no method of transmitting or storing information online can
-          be guaranteed to be completely secure.
-        </p>
-      ),
-    },
+  {
+    title: "Third Party Websites",
+    content: (
+      <p>
+        Our website may include links to external sites. We are not responsible
+        for the privacy practices of those sites, and we encourage you to
+        review their policies directly.
+      </p>
+    ),
+  },
 
-    {
-      title: "6. Information Sharing",
-      content: (
-        <p>
-          We do not sell your personal information. We may share information
-          with trusted service providers who assist us with website
-          operations, communications, analytics, hosting, or other business
-          functions. We may also disclose information when required by law or
-          when reasonably necessary to protect our rights, users, or business.
-        </p>
-      ),
-    },
-
-    {
-      title: "7. Data Retention",
-      content: (
-        <p>
-          We retain personal information only for as long as reasonably
-          necessary for the purposes described in this Privacy Policy,
-          including providing services, maintaining business records,
-          resolving disputes, enforcing agreements, and meeting legal or
-          regulatory requirements.
-        </p>
-      ),
-    },
-
-    {
-      title: "8. Your Privacy Rights",
-      content: (
-        <p>
-          Depending on where you live, you may have certain rights regarding
-          your personal information, including the right to request access,
-          correction, deletion, restriction, or other forms of control over
-          your information. To make a privacy-related request, please contact
-          us using the details provided below.
-        </p>
-      ),
-    },
-
-    {
-      title: "9. Third-Party Links",
-      content: (
-        <p>
-          Our website may contain links to third-party websites or services.
-          We are not responsible for the privacy practices, content, or
-          security of those third-party websites. We encourage you to review
-          their privacy policies before providing personal information.
-        </p>
-      ),
-    },
-
-    {
-      title: "10. Children's Privacy",
-      content: (
-        <p>
-          Our website and services are not intended for children. We do not
-          knowingly collect personal information from children where
-          prohibited by applicable law.
-        </p>
-      ),
-    },
-
-    {
-      title: "11. Changes to This Privacy Policy",
-      content: (
-        <p>
-          We may update this Privacy Policy from time to time to reflect
-          changes to our practices, services, or applicable legal requirements.
-          Any updated version will be posted on this page with a revised
-          effective date.
-        </p>
-      ),
-    },
-
-    {
-      title: "12. Contact Us",
-      content: (
-        <>
-          <p>
-            If you have questions about this Privacy Policy or would like to
-            make a privacy-related request, please contact us.
-          </p>
-
-          <div className="mt-6 rounded-2xl border border-black/10 bg-black/[0.025] p-6">
-            <p className="!mb-1 font-semibold text-black">
-              GoPurple
-            </p>
-
-            <p className="!mb-1">
-              Email: hello@gopurple.com
-            </p>
-
-            <p className="!mb-0">
-              Website: gopurple.com
-            </p>
-          </div>
-        </>
-      ),
-    },
-  ];
+  {
+    title: "Changes To This Policy",
+    content: (
+      <p>
+        We may update this policy from time to time. We will post any changes
+        on this page, along with an updated effective date. Where appropriate,
+        we may also notify you by email before a change takes effect.
+      </p>
+    ),
+  },
+];
 
   return (
     <>
+        <SEO
+          title="Privacy Policy"
+          description="Read Go Purple Nut's privacy policy to understand how we collect, use, protect, and handle personal information."
+          path="/privacy-policy"
+        />
         <Navbar forceScrolled/>
         <main className="min-h-screen bg-[#f4f1eb] text-[#17151a]">
 
@@ -266,8 +202,7 @@ const PrivacyPolicy = () => {
                 </div>
 
                 <p className="font-[var(--font-body)] text-base leading-[1.7] text-black/55 sm:text-lg">
-                    We respect your privacy and are committed to being transparent
-                    about how information is collected, used, and protected.
+                    By using our website, you agree to the practices described in this policy.
                 </p>
 
                 <p className="mt-5 font-[var(--font-body)] text-[10px] uppercase tracking-[0.18em] text-black/35">
@@ -283,7 +218,7 @@ const PrivacyPolicy = () => {
         <section>
             <div className="mx-auto max-w-[1100px] px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-28">
 
-            <motion.div
+            {/* <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -295,10 +230,10 @@ const PrivacyPolicy = () => {
                 protects, and handles information when you visit or interact
                 with our website and services.
                 </p>
-            </motion.div>
+            </motion.div> */}
 
             {/* Policy Sections */}
-            <div className="border-t border-black/10">
+            <div className="">
                 {sections.map((section, index) => (
                 <motion.article
                     key={section.title}
@@ -328,7 +263,7 @@ const PrivacyPolicy = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className="mt-12 flex items-center justify-between border-t border-black/10 pt-6"
+                className="mt-12 flex items-center justify-between pt-6"
             >
                 <span className="font-[var(--font-body)] text-[10px] uppercase tracking-[0.18em] text-black/30">
                 GoPurple

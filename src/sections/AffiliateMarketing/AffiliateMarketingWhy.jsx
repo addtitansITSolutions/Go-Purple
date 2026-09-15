@@ -65,7 +65,7 @@ const AffiliateMarketingWhy = () => {
 
           <p className="max-w-md font-[var(--font-body)] text-base leading-7 text-[var(--text)] sm:text-lg sm:leading-8 lg:pb-1">
            Your Growth Feels More Authentic when more people vouch for your brand.
-We build affiliate programs with real partners, results you can track, and value that lasts.
+           We build affiliate programs with real partners, results you can track, and value that lasts.
           </p>
         </motion.div>
 

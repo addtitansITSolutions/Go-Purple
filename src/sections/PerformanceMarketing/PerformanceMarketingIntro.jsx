@@ -19,21 +19,21 @@ const pillars = [
     number: "02",
     title: "Acquire",
     description:
-      "Turn attention into qualified traffic, leads, customers and conversions.",
+      "Turn attention into qualified traffic, leads, customers, and sales.",
     icon: MousePointerClick,
   },
   {
     number: "03",
     title: "Optimize",
     description:
-      "Use real campaign data to understand what works and improve what doesn't.",
+      "Use real campaign data to see what is working and fix what is not.",
     icon: BarChart3,
   },
   {
     number: "04",
     title: "Scale",
     description:
-      "Double down on winning campaigns while keeping efficiency and growth in balance.",
+      "Put more weight behind winning campaigns while keeping efficiency in check.",
     icon: TrendingUp,
   },
 ];
@@ -57,22 +57,22 @@ const PerformanceMarketingIntro = () => {
             </p>
 
             <h2 className="max-w-[580px] font-[var(--font-display)] text-4xl font-semibold leading-[0.98] tracking-[-0.05em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-              Every campaign should have a{" "}
-              <span className="text-[var(--primary)]">job to do.</span>
+              Every campaign should have {" "}
+              <span className="text-[var(--primary)]">its worth.</span>
             </h2>
           </div>
 
           <div className="lg:ml-auto lg:max-w-[620px]">
             <p className="text-base leading-7 text-[var(--text)] sm:text-lg">
-              Performance isn't just about getting more clicks. It's about
-              understanding what drives action, measuring what matters and
-              continuously improving the path from investment to return.
+              Performance is not just about getting more clicks. It is about understanding what
+              actually drives action, tracking what matters, and constantly sharpening the path from spend to
+              return.
             </p>
 
-            <div className="mt-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--dark)]">
+            {/* <div className="mt-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--dark)]">
               <span className="h-2 w-2 rounded-full bg-[var(--secondary)]" />
               Data before assumptions
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
